@@ -1,0 +1,54 @@
+[root@node-3 ~]# cat /sys/kernel/debug/tracing/trace_pipe
+CPU:11 [LOST 6183061 EVENTS]
+     xfsaild/sdg-13123 [011] .... 65347.566985: xfs_ilock_nowait: dev 8:96 ino 0x102646449 flags ILOCK_SHARED caller xfs_inode_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566988: xfs_iunlock: dev 8:96 ino 0x102646449 flags ILOCK_SHARED caller xfs_inode_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566989: xfs_ail_flushing: dev 8:96 lip 0xffffffd059529ed8 lsn 1/174724 type XFS_LI_INODE flags IN_AIL
+     xfsaild/sdg-13123 [011] .... 65347.566991: xfs_buf_trylock: dev 8:96 bno 0x7486b578 nblks 0x8 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|PAGES caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566992: xfs_buf_item_push: dev 8:96 bno 0x7486b578 len 0x1000 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|PAGES recur 0 refcount 0 bliflags DIRTY lidesc 0x          (null) liflags IN_AIL
+     xfsaild/sdg-13123 [011] .... 65347.566993: xfs_buf_delwri_queue: dev 8:96 bno 0x7486b578 nblks 0x8 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|PAGES caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566994: xfs_buf_unlock: dev 8:96 bno 0x7486b578 nblks 0x8 hold 2 pincount 0 lock 1 flags ASYNC|DONE|WRITE_FAIL|PAGES|DELWRI_Q caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566995: xfs_ail_push: dev 8:96 lip 0xffffffc26767b4d8 lsn 1/174724 type XFS_LI_BUF flags IN_AIL
+     xfsaild/sdg-13123 [011] .... 65347.566995: xfs_ilock_nowait: dev 8:96 ino 0x1000000e6 flags ILOCK_SHARED caller xfs_inode_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566996: xfs_iunlock: dev 8:96 ino 0x1000000e6 flags ILOCK_SHARED caller xfs_inode_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566996: xfs_ail_flushing: dev 8:96 lip 0xffffffd059529688 lsn 1/174724 type XFS_LI_INODE flags IN_AIL
+     xfsaild/sdg-13123 [011] .... 65347.566997: xfs_buf_trylock: dev 8:96 bno 0x74b72038 nblks 0x8 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|PAGES caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566998: xfs_buf_item_push: dev 8:96 bno 0x74b72038 len 0x1000 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|PAGES recur 0 refcount 0 bliflags DIRTY lidesc 0x          (null) liflags IN_AIL
+     xfsaild/sdg-13123 [011] .... 65347.566998: xfs_buf_delwri_queue: dev 8:96 bno 0x74b72038 nblks 0x8 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|PAGES caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566999: xfs_buf_unlock: dev 8:96 bno 0x74b72038 nblks 0x8 hold 2 pincount 0 lock 1 flags ASYNC|DONE|WRITE_FAIL|PAGES|DELWRI_Q caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.566999: xfs_ail_push: dev 8:96 lip 0xffffffc26771f3f0 lsn 1/174724 type XFS_LI_BUF flags IN_AIL 
+     xfsaild/sdg-13123 [011] .... 65347.567000: xfs_buf_trylock: dev 8:96 bno 0x74702fb2 nblks 0x1 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|KMEM caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.567001: xfs_buf_item_push: dev 8:96 bno 0x74702fb2 len 0x200 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|KMEM recur 0 refcount 0 bliflags DIRTY lidesc 0x          (null) liflags IN_AIL
+     xfsaild/sdg-13123 [011] .... 65347.567001: xfs_buf_delwri_queue: dev 8:96 bno 0x74702fb2 nblks 0x1 hold 1 pincount 0 lock 0 flags ASYNC|DONE|WRITE_FAIL|KMEM caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.567002: xfs_buf_unlock: dev 8:96 bno 0x74702fb2 nblks 0x1 hold 2 pincount 0 lock 1 flags ASYNC|DONE|WRITE_FAIL|KMEM|DELWRI_Q caller xfs_buf_item_push
+     xfsaild/sdg-13123 [011] .... 65347.567002: xfs_ail_push: dev 8:96 lip 0xffffffc193c6b308 lsn 1/174724 type XFS_LI_BUF flags IN_AIL
+..........
+CPU:9 [LOST 7056539 EVENTS]
+     xfsaild/sdg-13123 [009] .... 65360.851186: xfs_buf_rele: dev 8:96 bno 0x749a4ba0 nblks 0x8 hold 3 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller xfs_buf_submit
+     xfsaild/sdg-13123 [009] .... 65360.851186: xfs_buf_submit: dev 8:96 bno 0x74ae7500 nblks 0x8 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller __xfs_buf_delwri_submit
+     xfsaild/sdg-13123 [009] .... 65360.851187: xfs_buf_hold: dev 8:96 bno 0x74ae7500 nblks 0x8 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller xfs_buf_submit
+     xfsaild/sdg-13123 [009] .... 65360.851188: xfs_buf_rele: dev 8:96 bno 0x74ae7500 nblks 0x8 hold 3 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller xfs_buf_submit
+     xfsaild/sdg-13123 [009] .... 65360.851189: xfs_buf_submit: dev 8:96 bno 0x74b72038 nblks 0x8 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller __xfs_buf_delwri_submit
+     xfsaild/sdg-13123 [009] .... 65360.851189: xfs_buf_hold: dev 8:96 bno 0x74b72038 nblks 0x8 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller xfs_buf_submit
+     xfsaild/sdg-13123 [009] .... 65360.851191: xfs_buf_rele: dev 8:96 bno 0x74b72038 nblks 0x8 hold 3 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller xfs_buf_submit
+     xfsaild/sdg-13123 [009] .... 65360.851191: xfs_buf_submit: dev 8:96 bno 0x74bb1fe0 nblks 0x8 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller __xfs_buf_delwri_submit
+     xfsaild/sdg-13123 [009] .... 65360.851192: xfs_buf_hold: dev 8:96 bno 0x74bb1fe0 nblks 0x8 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller xfs_buf_submit
+     xfsaild/sdg-13123 [009] .... 65360.851193: xfs_buf_rele: dev 8:96 bno 0x74bb1fe0 nblks 0x8 hold 3 pincount 0 lock 0 flags WRITE|ASYNC|DONE|PAGES caller xfs_buf_submit
+.......
+     kworker/9:2-19222 [009] .... 65360.851303: xfs_buf_iodone: dev 8:96 bno 0x2 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|KMEM caller xfs_buf_ioend_work
+     kworker/9:2-19222 [009] .... 65360.851303: xfs_buf_ioerror: dev 8:96 bno 0x2 len 0x200 hold 2 pincount 0 lock 0 error -5 flags ASYNC|DONE|KMEM caller xfs_buf_ioend
+     kworker/9:2-19222 [009] .... 65360.851303: xfs_buf_item_iodone_async: dev 8:96 bno 0x2 nblks 0x1 hold 2 pincount 0 lock 0 flags ASYNC|DONE|KMEM caller xfs_buf_ioend
+     kworker/9:2-19222 [009] .... 65360.851304: xfs_buf_ioerror: dev 8:96 bno 0x2 len 0x200 hold 2 pincount 0 lock 0 error 0 flags ASYNC|DONE|KMEM caller xfs_buf_iodone_callbacks
+     kworker/9:2-19222 [009] .... 65360.851304: xfs_buf_submit: dev 8:96 bno 0x2 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|WRITE_FAIL|KMEM caller xfs_buf_iodone_callbacks
+CPU:10 [LOST 6409846 EVENTS]
+     xfsaild/sdg-13123 [010] .... 65363.451123: xfs_buf_submit: dev 8:96 bno 0x2 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|KMEM caller __xfs_buf_delwri_submit
+     xfsaild/sdg-13123 [010] .... 65363.451124: xfs_buf_hold: dev 8:96 bno 0x2 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|KMEM caller xfs_buf_submit
+     xfsaild/sdg-13123 [010] .... 65363.451126: xfs_buf_rele: dev 8:96 bno 0x2 nblks 0x1 hold 3 pincount 0 lock 0 flags WRITE|ASYNC|DONE|KMEM caller xfs_buf_submit
+........
+     xfsaild/sdg-13123 [010] .... 65363.451232: xfs_buf_submit: dev 8:96 bno 0x15d508f12 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|KMEM caller __xfs_buf_delwri_submit
+     xfsaild/sdg-13123 [010] .... 65363.451232: xfs_buf_hold: dev 8:96 bno 0x15d508f12 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|KMEM caller xfs_buf_submit
+CPU:14 [LOST 29745 EVENTS]
+    kworker/14:1-31143 [014] .... 65386.731469: xfs_buf_iodone: dev 8:96 bno 0xe8e05f62 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|KMEM caller xfs_buf_ioend_work
+    kworker/14:1-31143 [014] .... 65386.731470: xfs_buf_ioerror: dev 8:96 bno 0xe8e05f62 len 0x200 hold 2 pincount 0 lock 0 error -5 flags ASYNC|DONE|KMEM caller xfs_buf_ioend
+    kworker/14:1-31143 [014] .... 65386.731470: xfs_buf_item_iodone_async: dev 8:96 bno 0xe8e05f62 nblks 0x1 hold 2 pincount 0 lock 0 flags ASYNC|DONE|KMEM caller xfs_buf_ioend
+    kworker/14:1-31143 [014] .... 65386.731471: xfs_buf_ioerror: dev 8:96 bno 0xe8e05f62 len 0x200 hold 2 pincount 0 lock 0 error 0 flags ASYNC|DONE|KMEM caller xfs_buf_iodone_callbacks
+    kworker/14:1-31143 [014] .... 65386.731471: xfs_buf_submit: dev 8:96 bno 0xe8e05f62 nblks 0x1 hold 2 pincount 0 lock 0 flags WRITE|ASYNC|DONE|WRITE_FAIL|KMEM caller xfs_buf_iodone_callbacks
