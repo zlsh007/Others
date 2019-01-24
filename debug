@@ -1,1 +1,29 @@
 
+[root@controller-2 sessions]# ls
+iqn.1994-05.com.redhat:c8359adcaec_1
+[root@controller-2 sessions]# 
+[root@controller-2 sessions]# echo 1 > iqn.1994-05.com.redhat\:c8359adcaec_1/force_close 
+[root@controller-2 sessions]# ls
+iqn.1994-05.com.redhat:c8359adcaec
+[root@controller-2 sessions]# 
+[root@controller-2 sessions]# ls iqn.1994-05.com.redhat\:c8359adcaec/
+10.10.11.100      ImmediateData      MaxRecvDataSegmentLength  bidi_io_count_kb          initiator_name  read_cmd_count            sid                write_io_count_kb
+DataDigest        InitialR2T         MaxXmitDataSegmentLength  bidi_unaligned_cmd_count  lun0            read_io_count_kb          thread_pid         write_unaligned_cmd_count
+FirstBurstLength  MaxBurstLength     active_commands           commands                  luns            read_unaligned_cmd_count  unknown_cmd_count
+HeaderDigest      MaxOutstandingR2T  bidi_cmd_count            force_close               none_cmd_count  reinstating               write_cmd_count
+[root@controller-2 sessions]# 
+[root@controller-2 sessions]# dmesg 
+[80048.370901] [21222]: iscsi-scst: Force closing session 60e00003d0200 with initiator iqn.1994-05.com.redhat:c8359adcaec (ffffffc8db585dc0)
+[80048.381981] [21222]: iscsi-scst: Force closing connection ffffffc8918c8000
+[80048.387853] [28910]: scst: TM fn NEXUS_LOSS_SESS/6 (mcmd ffffffc8631ae788, initiator iqn.1994-05.com.redhat:c8359adcaec, target 117:1)
+[80048.398590] [25837]: scst: Using security group "117:1" for initiator "iqn.1994-05.com.redhat:c8359adcaec" (target 117:1)
+[80048.409065] [25837]: iscsi-scst: Session ffffffc8db580000 created: target ffffffc015908e00, tid 1, sid 0x70e00003d0200, initiator iqn.1994-05.com.redhat:c8359adcaec
+[80048.422392] [28910]: iscsi-scst: Freeing conn ffffffc8918c8000 (sess=ffffffc8db585dc0, 0x60e00003d0200 0, initiator iqn.1994-05.com.redhat:c8359adcaec)
+[80048.434597] [25654]: scst: TM fn 6 (mcmd ffffffc8631ae788) finished, status 0
+[80048.440410] [28910]: iscsi-scst: Freeing session ffffffc8db585dc0 (SID 60e00003d0200)
+[80048.446986] [25837]: iscsi-scst: Negotiated parameters: InitialR2T No, ImmediateData Yes, MaxConnections 1, MaxRecvDataSegmentLength 1048576, MaxXmitDataSegmentLength 262144, 
+[80048.461294] [25837]: iscsi-scst:     MaxBurstLength 1048576, FirstBurstLength 65536, DefaultTime2Wait 0, DefaultTime2Retain 0, 
+[80048.471440] [25837]: iscsi-scst:     MaxOutstandingR2T 1, DataPDUInOrder Yes, DataSequenceInOrder Yes, ErrorRecoveryLevel 0, 
+[80048.481422] [25837]: iscsi-scst:     HeaderDigest None, DataDigest None, OFMarker No, IFMarker No, OFMarkInt 2048, IFMarkInt 2048, RDMAExtensions No
+[80048.493385] [25837]: iscsi-scst: Target parameters set for session 70e00003d0200: QueuedCommands 32, Response timeout 90, Nop-In interval 30, Nop-In timeout 30
+[80048.506444] [25837]: iscsi-scst: Creating connection ffffffc8918c8000 for sid 0x70e00003d0200, cid 0 (initiator iqn.1994-05.com.redhat:c8359adcaec)
