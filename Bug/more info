@@ -1,0 +1,108 @@
+ -----------------------------------------------------------------------------------------------------------------------------------
+ trace info：
+   624      xfsaild/sdc-12155 [005] ....  6990.606468: xfs_ilock_nowait: dev 8:32 ino 0x10575adfe flags ILOCK_SHARED caller xfs_inode_item_push
+   625      xfsaild/sdc-12155 [005] ....  6990.606473: xfs_iunlock: dev 8:32 ino 0x10575adfe flags ILOCK_SHARED caller xfs_inode_item_push
+   626      xfsaild/sdc-12155 [005] ....  6990.606474: xfs_ail_flushing: dev 8:32 lip 0xffffffd04767e098 lsn 1/56528 type XFS_LI_INODE flags IN_AIL
+   627      xfsaild/sdc-12155 [005] ....  6990.606475: xfs_ilock_nowait: dev 8:32 ino 0x10575ae06 flags ILOCK_SHARED caller xfs_inode_item_push
+   628      xfsaild/sdc-12155 [005] ....  6990.606476: xfs_iunlock: dev 8:32 ino 0x10575ae06 flags ILOCK_SHARED caller xfs_inode_item_push
+   629      xfsaild/sdc-12155 [005] ....  6990.606476: xfs_ail_flushing: dev 8:32 lip 0xffffffcffd624be0 lsn 1/56528 type XFS_LI_INODE flags IN_AIL
+   630      xfsaild/sdc-12155 [005] ....  6990.606477: xfs_ilock_nowait: dev 8:32 ino 0x28ee51 flags ILOCK_SHARED caller xfs_inode_item_push
+   631      xfsaild/sdc-12155 [005] ....  6990.606478: xfs_iunlock: dev 8:32 ino 0x28ee51 flags ILOCK_SHARED caller xfs_inode_item_push                                                    
+   632      xfsaild/sdc-12155 [005] ....  6990.606478: xfs_ail_flushing: dev 8:32 lip 0xffffffcffcec3098 lsn 1/56528 type XFS_LI_INODE flags IN_AIL
+   633      xfsaild/sdc-12155 [005] ....  6990.606479: xfs_ilock_nowait: dev 8:32 ino 0x305fd7cb6 flags ILOCK_SHARED caller xfs_inode_item_push
+   634      xfsaild/sdc-12155 [005] ....  6990.606479: xfs_iunlock: dev 8:32 ino 0x305fd7cb6 flags ILOCK_SHARED caller xfs_inode_item_push
+   635      xfsaild/sdc-12155 [005] ....  6990.606480: xfs_ail_flushing: dev 8:32 lip 0xffffffd00f56d2f8 lsn 1/56528 type XFS_LI_INODE flags IN_AIL
+   636      xfsaild/sdc-12155 [005] ....  6990.606481: xfs_ilock_nowait: dev 8:32 ino 0x305f47f17 flags ILOCK_SHARED caller xfs_inode_item_push
+   637      xfsaild/sdc-12155 [005] ....  6990.606481: xfs_iunlock: dev 8:32 ino 0x305f47f17 flags ILOCK_SHARED caller xfs_inode_item_push
+   638      xfsaild/sdc-12155 [005] ....  6990.606482: xfs_ail_flushing: dev 8:32 lip 0xffffffcffe1f95f0 lsn 1/56528 type XFS_LI_INODE flags IN_AIL
+   639      xfsaild/sdc-12155 [005] ....  6990.606482: xfs_ilock_nowait: dev 8:32 ino 0x8ad5aca flags ILOCK_SHARED caller xfs_inode_item_push
+-------------------------------------------------------------------------------------------------------------------------------------
+what I changed for Linux 4.4.163
+
+---
+ fs/xfs/xfs_buf_item.c | 14 +++++++++++++-
+ fs/xfs/xfs_mount.c    | 16 ++++++++++++++++
+ fs/xfs/xfs_mount.h    |  4 ++++
+ 3 files changed, 33 insertions(+), 1 deletion(-)
+
+diff --git a/fs/xfs/xfs_buf_item.c b/fs/xfs/xfs_buf_item.c
+index 7e986da..dd5aef9 100644
+--- a/fs/xfs/xfs_buf_item.c
++++ b/fs/xfs/xfs_buf_item.c
+@@ -1079,6 +1079,11 @@ xfs_buf_iodone_callbacks(
+ 	}
+ 	lasttarg = bp->b_target;
+ 
++    if (mp->m_flags & XFS_MOUNT_UNMOUNTING)
++        goto permanent_error;
++
+ 	/*
+ 	 * If the write was asynchronous then no one will be looking for the
+ 	 * error.  Clear the error state and write the buffer out again.
+@@ -1108,6 +1113,14 @@ xfs_buf_iodone_callbacks(
+ 		return;
+ 	}
+ 
++permanent_error:
++    xfs_force_shutdown(mp, SHUTDOWN_META_IO_ERROR);
+
+ 	/*
+ 	 * If the write of the buffer was synchronous, we want to make
+ 	 * sure to return the error to the caller of xfs_bwrite().
+@@ -1116,7 +1129,6 @@ xfs_buf_iodone_callbacks(
+ 	XFS_BUF_DONE(bp);
+ 
+ 	trace_xfs_buf_error_relse(bp, _RET_IP_);
+-
+ do_callbacks:
+ 	xfs_buf_do_callbacks(bp);
+ 	bp->b_fspriv = NULL;
+diff --git a/fs/xfs/xfs_mount.c b/fs/xfs/xfs_mount.c
+index bb753b3..6f2ddf9 100644
+--- a/fs/xfs/xfs_mount.c
++++ b/fs/xfs/xfs_mount.c
+@@ -699,6 +699,12 @@ xfs_mountfs(
+ 
+ 	xfs_set_maxicount(mp);
+ 
+ 	error = xfs_sysfs_init(&mp->m_kobj, &xfs_mp_ktype, NULL, mp->m_fsname);
+ 	if (error)
+ 		goto out;
+@@ -975,6 +981,8 @@ xfs_mountfs(
+ 	cancel_delayed_work_sync(&mp->m_reclaim_work);
+ 	xfs_reclaim_inodes(mp, SYNC_WAIT);
+  out_log_dealloc:
++    mp->m_flags |= XFS_MOUNT_UNMOUNTING;
+ 	xfs_log_mount_cancel(mp);
+  out_fail_wait:
+ 	if (mp->m_logdev_targp && mp->m_logdev_targp != mp->m_ddev_targp)
+@@ -1023,6 +1031,14 @@ xfs_unmountfs(
+ 	 */
+ 	xfs_log_force(mp, XFS_LOG_SYNC);
+ 
++	 * We now need to tell the world we are unmounting. This will allow
++	 * us to detect that the filesystem is going away and we should error
++	 * out anything that we have been retrying in the background. This will
++	 * prevent neverending retries in AIL pushing from hanging the unmount.
++	 */
++	mp->m_flags |= XFS_MOUNT_UNMOUNTING;
++
+ 	/*
+ 	 * Flush all pending changes from the AIL.
+ 	 */
+diff --git a/fs/xfs/xfs_mount.h b/fs/xfs/xfs_mount.h
+index ae3e527..2a561c5 100644
+--- a/fs/xfs/xfs_mount.h
++++ b/fs/xfs/xfs_mount.h
+ 
+ /*
+@@ -155,6 +157,8 @@ typedef struct xfs_mount {
+ #define XFS_MOUNT_WSYNC		(1ULL << 0)	/* for nfs - all metadata ops
+ 						   must be synchronous except
+ 						   for space allocations */
++#define XFS_MOUNT_UNMOUNTING (1ULL << 1) /* filesystem is unmounting */
+ #define XFS_MOUNT_WAS_CLEAN	(1ULL << 3)
+ #define XFS_MOUNT_FS_SHUTDOWN	(1ULL << 4)	/* atomic stop of all filesystem
+ 						   operations, typically for
+-- 
+1.8.3.1
