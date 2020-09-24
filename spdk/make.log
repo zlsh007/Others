@@ -1,0 +1,2532 @@
+make -j 4 clean 
+Makefile:42: "blob_ut.c compilation skipped, only CUnit version 2.1-3 is supported"
+make[4]: 对“clean”无需做任何事。
+make -j 4 CONFIG_DEBUG=n CONFIG_WERROR=y 
+The Meson build system
+Version: 0.55.3
+Source dir: /home/suh/src/spdk/git/push/tmp/spdk/dpdk
+Build dir: /home/suh/src/spdk/git/push/tmp/spdk/dpdk/build-tmp
+Build type: native build
+Program cat found: YES
+Project name: DPDK
+Project version: 20.08.0
+Using 'CC' from environment with value: 'cc'
+Using 'CC' from environment with value: 'cc'
+C compiler for the host machine: cc (gcc 8.3.0 "cc (Ubuntu 8.3.0-26ubuntu1~18.04) 8.3.0")
+C linker for the host machine: cc ld.bfd 2.31.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Program pkg-config found: YES
+Program gen-pmdinfo-cfile.sh found: YES
+Program list-dir-globs.py found: YES
+Program check-symbols.sh found: YES
+Program options-ibverbs-static.sh found: YES
+Program binutils-avx512-check.sh found: YES
+Program python3 found: YES (/usr/bin/python3)
+Program cat found: YES
+Program ../buildtools/symlink-drivers-solibs.sh found: YES (/bin/sh /home/suh/src/spdk/git/push/tmp/spdk/dpdk/config/../buildtools/symlink-drivers-solibs.sh)
+Checking for size of "void *" : 8
+Library m found: YES
+Library numa found: YES
+Has header "numaif.h" : YES 
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Found CMake: /usr/bin/cmake (3.12.1)
+Run-time dependency libbsd found: NO (tried pkgconfig and cmake)
+pcap-config found: NO
+Run-time dependency pcap found: NO (tried pkgconfig and config-tool)
+Compiler for C supports arguments -Wextra: YES 
+config/meson.build:223: WARNING: Consider using the built-in warning_level option instead of using "-Wextra".
+Compiler for C supports arguments -Wcast-qual: YES 
+Compiler for C supports arguments -Wdeprecated: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wno-address-of-packed-member -Waddress-of-packed-member: NO 
+Compiler for C supports arguments -Wno-packed-not-aligned -Wpacked-not-aligned: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers -Wmissing-field-initializers: YES 
+Fetching value of define "__SSE4_2__" : 1 
+Fetching value of define "__AES__" :  
+Fetching value of define "__PCLMUL__" : 1 
+Fetching value of define "__AVX__" : 1 
+Fetching value of define "__AVX2__" : 1 
+Fetching value of define "__AVX512F__" :  
+Fetching value of define "__RDRND__" : 1 
+Fetching value of define "__RDSEED__" : 1 
+Compiler for C supports arguments -Wno-format-truncation -Wformat-truncation: YES 
+Message: lib/librte_kvargs: Defining dependency "kvargs"
+Message: lib/librte_telemetry: Defining dependency "telemetry"
+Checking for function "getentropy" : YES 
+Has header "getopt.h" : YES 
+Message: lib/librte_eal: Defining dependency "eal"
+Message: lib/librte_ring: Defining dependency "ring"
+Message: lib/librte_mempool: Defining dependency "mempool"
+Message: lib/librte_mbuf: Defining dependency "mbuf"
+Message: lib/librte_net: Defining dependency "net"
+Message: lib/librte_meter: Defining dependency "meter"
+Message: lib/librte_ethdev: Defining dependency "ethdev"
+Message: lib/librte_pci: Defining dependency "pci"
+Message: lib/librte_cmdline: Defining dependency "cmdline"
+Run-time dependency jansson found: NO (tried pkgconfig and cmake)
+Message: lib/librte_hash: Defining dependency "hash"
+Message: lib/librte_compressdev: Defining dependency "compressdev"
+Message: lib/librte_cryptodev: Defining dependency "cryptodev"
+Message: lib/librte_reorder: Defining dependency "reorder"
+Message: lib/librte_security: Defining dependency "security"
+Has header "linux/userfaultfd.h" : YES 
+Message: lib/librte_vhost: Defining dependency "vhost"
+Run-time dependency libelf found: NO (tried pkgconfig and cmake)
+Compiler for C supports arguments -Wno-format-truncation -Wformat-truncation: YES (cached)
+Message: drivers/bus/pci: Defining dependency "bus_pci"
+Message: drivers/bus/vdev: Defining dependency "bus_vdev"
+Message: drivers/mempool/ring: Defining dependency "mempool_ring"
+Program doxygen found: NO
+Program sphinx-build found: NO
+Library execinfo found: NO
+Configuring rte_build_config.h using configuration
+Message: 
+=================
+Libraries Enabled
+=================
+
+libs:
+	kvargs, telemetry, eal, ring, mempool, mbuf, net, meter, 
+	ethdev, pci, cmdline, hash, compressdev, cryptodev, reorder, security, 
+	vhost, 
+
+Message: 
+===============
+Drivers Enabled
+===============
+
+common:
+	
+bus:
+	pci, vdev, 
+mempool:
+	ring, 
+net:
+	
+raw:
+	
+crypto:
+	
+compress:
+	
+regex:
+	
+vdpa:
+	
+event:
+	
+baseband:
+	
+
+Message: 
+=================
+Content Skipped
+=================
+
+libs:
+	rcu:	not needed by SPDK
+	metrics:	not needed by SPDK
+	timer:	not needed by SPDK
+	acl:	not needed by SPDK
+	bbdev:	not needed by SPDK
+	bitratestats:	not needed by SPDK
+	cfgfile:	not needed by SPDK
+	distributor:	not needed by SPDK
+	efd:	not needed by SPDK
+	eventdev:	not needed by SPDK
+	gro:	not needed by SPDK
+	gso:	not needed by SPDK
+	ip_frag:	not needed by SPDK
+	jobstats:	not needed by SPDK
+	kni:	not needed by SPDK
+	latencystats:	not needed by SPDK
+	lpm:	not needed by SPDK
+	member:	not needed by SPDK
+	power:	not needed by SPDK
+	pdump:	not needed by SPDK
+	rawdev:	not needed by SPDK
+	regexdev:	not needed by SPDK
+	rib:	not needed by SPDK
+	sched:	not needed by SPDK
+	stack:	not needed by SPDK
+	ipsec:	not needed by SPDK
+	fib:	not needed by SPDK
+	port:	not needed by SPDK
+	table:	not needed by SPDK
+	pipeline:	not needed by SPDK
+	flow_classify:	not needed by SPDK
+	bpf:	not needed by SPDK
+	graph:	not needed by SPDK
+	node:	not needed by SPDK
+	
+drivers:
+	common/cpt:	Explicitly disabled via build config
+	common/dpaax:	Explicitly disabled via build config
+	common/iavf:	Explicitly disabled via build config
+	common/mvep:	Explicitly disabled via build config
+	common/octeontx:	Explicitly disabled via build config
+	common/octeontx2:	Explicitly disabled via build config
+	common/qat:	Explicitly disabled via build config
+	bus/dpaa:	Explicitly disabled via build config
+	bus/fslmc:	Explicitly disabled via build config
+	bus/ifpga:	Explicitly disabled via build config
+	bus/vmbus:	Explicitly disabled via build config
+	common/mlx5:	Explicitly disabled via build config
+	mempool/bucket:	Explicitly disabled via build config
+	mempool/dpaa:	Explicitly disabled via build config
+	mempool/dpaa2:	Explicitly disabled via build config
+	mempool/octeontx:	Explicitly disabled via build config
+	mempool/octeontx2:	Explicitly disabled via build config
+	mempool/stack:	Explicitly disabled via build config
+	net/af_packet:	Explicitly disabled via build config
+	net/af_xdp:	Explicitly disabled via build config
+	net/ark:	Explicitly disabled via build config
+	net/atlantic:	Explicitly disabled via build config
+	net/avp:	Explicitly disabled via build config
+	net/axgbe:	Explicitly disabled via build config
+	net/bonding:	Explicitly disabled via build config
+	net/bnx2x:	Explicitly disabled via build config
+	net/bnxt:	Explicitly disabled via build config
+	net/cxgbe:	Explicitly disabled via build config
+	net/dpaa:	Explicitly disabled via build config
+	net/dpaa2:	Explicitly disabled via build config
+	net/e1000:	Explicitly disabled via build config
+	net/ena:	Explicitly disabled via build config
+	net/enetc:	Explicitly disabled via build config
+	net/enic:	Explicitly disabled via build config
+	net/failsafe:	Explicitly disabled via build config
+	net/fm10k:	Explicitly disabled via build config
+	net/i40e:	Explicitly disabled via build config
+	net/hinic:	Explicitly disabled via build config
+	net/hns3:	Explicitly disabled via build config
+	net/iavf:	Explicitly disabled via build config
+	net/ice:	Explicitly disabled via build config
+	net/igc:	Explicitly disabled via build config
+	net/ipn3ke:	Explicitly disabled via build config
+	net/ixgbe:	Explicitly disabled via build config
+	net/kni:	Explicitly disabled via build config
+	net/liquidio:	Explicitly disabled via build config
+	net/memif:	Explicitly disabled via build config
+	net/mlx4:	Explicitly disabled via build config
+	net/mlx5:	Explicitly disabled via build config
+	net/mvneta:	Explicitly disabled via build config
+	net/mvpp2:	Explicitly disabled via build config
+	net/netvsc:	Explicitly disabled via build config
+	net/nfb:	Explicitly disabled via build config
+	net/nfp:	Explicitly disabled via build config
+	net/null:	Explicitly disabled via build config
+	net/octeontx:	Explicitly disabled via build config
+	net/octeontx2:	Explicitly disabled via build config
+	net/pcap:	Explicitly disabled via build config
+	net/pfe:	Explicitly disabled via build config
+	net/qede:	Explicitly disabled via build config
+	net/ring:	Explicitly disabled via build config
+	net/sfc:	Explicitly disabled via build config
+	net/softnic:	Explicitly disabled via build config
+	net/szedata2:	Explicitly disabled via build config
+	net/tap:	Explicitly disabled via build config
+	net/thunderx:	Explicitly disabled via build config
+	net/vdev_netvsc:	Explicitly disabled via build config
+	net/vhost:	Explicitly disabled via build config
+	net/virtio:	Explicitly disabled via build config
+	net/vmxnet3:	Explicitly disabled via build config
+	raw/dpaa2_cmdif:	Explicitly disabled via build config
+	raw/dpaa2_qdma:	Explicitly disabled via build config
+	raw/ifpga:	Explicitly disabled via build config
+	raw/ioat:	Explicitly disabled via build config
+	raw/ntb:	Explicitly disabled via build config
+	raw/octeontx2_dma:	Explicitly disabled via build config
+	raw/octeontx2_ep:	Explicitly disabled via build config
+	raw/skeleton:	Explicitly disabled via build config
+	crypto/aesni_gcm:	Explicitly disabled via build config
+	crypto/aesni_mb:	Explicitly disabled via build config
+	crypto/armv8:	Explicitly disabled via build config
+	crypto/caam_jr:	Explicitly disabled via build config
+	crypto/ccp:	Explicitly disabled via build config
+	crypto/dpaa_sec:	Explicitly disabled via build config
+	crypto/dpaa2_sec:	Explicitly disabled via build config
+	crypto/kasumi:	Explicitly disabled via build config
+	crypto/mvsam:	Explicitly disabled via build config
+	crypto/nitrox:	Explicitly disabled via build config
+	crypto/null:	Explicitly disabled via build config
+	crypto/octeontx:	Explicitly disabled via build config
+	crypto/octeontx2:	Explicitly disabled via build config
+	crypto/openssl:	Explicitly disabled via build config
+	crypto/qat:	Explicitly disabled via build config
+	crypto/scheduler:	Explicitly disabled via build config
+	crypto/snow3g:	Explicitly disabled via build config
+	crypto/virtio:	Explicitly disabled via build config
+	crypto/zuc:	Explicitly disabled via build config
+	compress/isal:	Explicitly disabled via build config
+	compress/octeontx:	Explicitly disabled via build config
+	compress/qat:	Explicitly disabled via build config
+	compress/zlib:	Explicitly disabled via build config
+	regex/mlx5:	Explicitly disabled via build config
+	vdpa/ifc:	Explicitly disabled via build config
+	vdpa/mlx5:	Explicitly disabled via build config
+	event/dpaa:	Explicitly disabled via build config
+	event/dpaa2:	Explicitly disabled via build config
+	event/octeontx2:	Explicitly disabled via build config
+	event/opdl:	Explicitly disabled via build config
+	event/skeleton:	Explicitly disabled via build config
+	event/sw:	Explicitly disabled via build config
+	event/dsw:	Explicitly disabled via build config
+	event/octeontx:	Explicitly disabled via build config
+	baseband/null:	Explicitly disabled via build config
+	baseband/turbo_sw:	Explicitly disabled via build config
+	baseband/fpga_lte_fec:	Explicitly disabled via build config
+	baseband/fpga_5gnr_fec:	Explicitly disabled via build config
+	
+
+Build targets in project: 108
+
+Found ninja-1.8.2 at /usr/bin/ninja
+ninja: Entering directory `/home/suh/src/spdk/git/push/tmp/spdk/dpdk/build-tmp'
+[1/260] Generating rte_kvargs_def with a custom command
+[2/260] Generating rte_kvargs_mingw with a custom command
+[3/260] Compiling C object lib/librte_telemetry.a.p/librte_telemetry_telemetry_data.c.o
+[4/260] Compiling C object lib/librte_kvargs.a.p/librte_kvargs_rte_kvargs.c.o
+[5/260] Linking static target lib/librte_kvargs.a
+[6/260] Compiling C object lib/librte_telemetry.a.p/librte_telemetry_telemetry.c.o
+[7/260] Compiling C object buildtools/pmdinfogen/pmdinfogen.p/pmdinfogen.c.o
+[8/260] Compiling C object lib/librte_telemetry.a.p/librte_telemetry_telemetry_legacy.c.o
+[9/260] Linking static target lib/librte_telemetry.a
+[10/260] Generating rte_telemetry_def with a custom command
+[11/260] Linking target buildtools/pmdinfogen/pmdinfogen
+[12/260] Generating rte_telemetry_mingw with a custom command
+[13/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_cpuflags.c.o
+[14/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_errno.c.o
+[15/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_bus.c.o
+[16/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_class.c.o
+[17/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_debug.c.o
+[18/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_config.c.o
+[19/260] Generating kvargs.sym_chk with a meson_exe.py custom command
+[20/260] Linking target lib/librte_kvargs.so.20.0.3
+[21/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_devargs.c.o
+[22/260] Generating telemetry.sym_chk with a meson_exe.py custom command
+[23/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_dev.c.o
+[24/260] Linking target lib/librte_telemetry.so.20.0.3
+[25/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_hexdump.c.o
+[26/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_hypervisor.c.o
+[27/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_launch.c.o
+[28/260] Generating symbol file lib/librte_kvargs.so.20.0.3.p/librte_kvargs.so.20.0.3.symbols
+[29/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_lcore.c.o
+[30/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_mcfg.c.o
+[31/260] Generating symbol file lib/librte_telemetry.so.20.0.3.p/librte_telemetry.so.20.0.3.symbols
+[32/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_fbarray.c.o
+[33/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_memalloc.c.o
+[34/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_log.c.o
+[35/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_memzone.c.o
+[36/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_string_fns.c.o
+[37/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_tailqs.c.o
+[38/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_memory.c.o
+[39/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_proc.c.o
+[40/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_thread.c.o
+[41/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_timer.c.o
+[42/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace_ctf.c.o
+[43/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace_points.c.o
+[44/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace.c.o
+[45/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_uuid.c.o
+[46/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_hotplug_mp.c.o
+[47/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace_utils.c.o
+[48/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_options.c.o
+[49/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_malloc_elem.c.o
+[50/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_keepalive.c.o
+[51/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_malloc_mp.c.o
+[52/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_reciprocal.c.o
+[53/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_malloc_heap.c.o
+[54/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_malloc.c.o
+[55/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_service.c.o
+[56/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_random.c.o
+[57/260] Compiling C object lib/librte_eal.a.p/librte_eal_unix_eal_file.c.o
+[58/260] Compiling C object lib/librte_eal.a.p/librte_eal_unix_eal_unix_timer.c.o
+[59/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_dynmem.c.o
+[60/260] Compiling C object lib/librte_eal.a.p/librte_eal_unix_eal_unix_memory.c.o
+[61/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_debug.c.o
+[62/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_cpuflags.c.o
+[63/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_alarm.c.o
+[64/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_dev.c.o
+[65/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_log.c.o
+[66/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal.c.o
+[67/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_hugepage_info.c.o
+[68/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_lcore.c.o
+[69/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_thread.c.o
+[70/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_interrupts.c.o
+[71/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_timer.c.o
+[72/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_cpuflags.c.o
+[73/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_memalloc.c.o
+[74/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_vfio_mp_sync.c.o
+[75/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_spinlock.c.o
+[76/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_cycles.c.o
+[77/260] Generating rte_ring_mingw with a custom command
+[78/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_memory.c.o
+[79/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_hypervisor.c.o
+[80/260] Generating rte_eal_def with a custom command
+[81/260] Generating rte_ring_def with a custom command
+[82/260] Generating rte_eal_mingw with a custom command
+[83/260] Compiling C object lib/librte_ring.a.p/librte_ring_rte_ring.c.o
+[84/260] Linking static target lib/librte_ring.a
+[85/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_vfio.c.o
+[86/260] Linking static target lib/librte_eal.a
+[87/260] Compiling C object lib/librte_security.a.p/librte_security_rte_security.c.o
+[88/260] Linking static target lib/librte_security.a
+[89/260] Generating ring.sym_chk with a meson_exe.py custom command
+[90/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_rte_mempool.c.o
+[91/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_rte_mempool_ops.c.o
+[92/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_rte_mempool_ops_default.c.o
+[93/260] Generating rte_mempool_def with a custom command
+[94/260] Generating rte_mempool_mingw with a custom command
+[95/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_mempool_trace_points.c.o
+[96/260] Linking static target lib/librte_mempool.a
+[97/260] Generating mempool.sym_chk with a meson_exe.py custom command
+[98/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_rte_mempool.c.o
+[99/260] Generating eal.sym_chk with a meson_exe.py custom command
+[100/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf.c.o
+[101/260] Linking target lib/librte_eal.so.20.0.3
+[102/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_rte_mempool_ops.c.o
+[103/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_rte_mempool_ops_default.c.o
+[104/260] Generating rte_mbuf_def with a custom command
+[105/260] Generating symbol file lib/librte_eal.so.20.0.3.p/librte_eal.so.20.0.3.symbols
+[106/260] Linking target lib/librte_ring.so.20.0.3
+[107/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_mempool_trace_points.c.o
+[108/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf_pool_ops.c.o
+[109/260] Generating rte_mbuf_mingw with a custom command
+[110/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf_ptype.c.o
+[111/260] Generating rte_net_def with a custom command
+[112/260] Generating symbol file lib/librte_ring.so.20.0.3.p/librte_ring.so.20.0.3.symbols
+[113/260] Linking target lib/librte_mempool.so.20.0.3
+[114/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf_dyn.c.o
+[115/260] Linking static target lib/librte_mbuf.a
+[116/260] Compiling C object lib/librte_net.a.p/librte_net_rte_ether.c.o
+[117/260] Compiling C object lib/librte_net.a.p/librte_net_rte_arp.c.o
+[118/260] Generating symbol file lib/librte_mempool.so.20.0.3.p/librte_mempool.so.20.0.3.symbols
+[119/260] Generating rte_net_mingw with a custom command
+[120/260] Compiling C object lib/librte_meter.a.p/librte_meter_rte_meter.c.o
+[121/260] Linking static target lib/librte_meter.a
+[122/260] Generating mbuf.sym_chk with a meson_exe.py custom command
+[123/260] Linking target lib/librte_mbuf.so.20.0.3
+[124/260] Compiling C object lib/librte_net.a.p/librte_net_rte_net_crc.c.o
+[125/260] Compiling C object lib/librte_net.a.p/librte_net_rte_net.c.o
+[126/260] Linking static target lib/librte_net.a
+[127/260] Generating rte_meter_def with a custom command
+[128/260] Generating rte_meter_mingw with a custom command
+[129/260] Generating symbol file lib/librte_mbuf.so.20.0.3.p/librte_mbuf.so.20.0.3.symbols
+[130/260] Generating net.sym_chk with a meson_exe.py custom command
+[131/260] Linking target lib/librte_net.so.20.0.3
+[132/260] Generating meter.sym_chk with a meson_exe.py custom command
+[133/260] Compiling C object lib/librte_meter.so.20.0.3.p/librte_meter_rte_meter.c.o
+[134/260] Linking target lib/librte_meter.so.20.0.3
+[135/260] Compiling C object drivers/libtmp_rte_mempool_ring.a.p/mempool_ring_rte_mempool_ring.c.o
+[136/260] Generating symbol file lib/librte_net.so.20.0.3.p/librte_net.so.20.0.3.symbols
+[137/260] Generating symbol file lib/librte_meter.so.20.0.3.p/librte_meter.so.20.0.3.symbols
+[138/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_ethdev_private.c.o
+[139/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_ethdev_profile.c.o
+[140/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_ethdev_trace_points.c.o
+[141/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_class_eth.c.o
+[142/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_mtr.c.o
+[143/260] Generating rte_ethdev_def with a custom command
+[144/260] Generating rte_ethdev_mingw with a custom command
+[145/260] Compiling C object lib/librte_pci.a.p/librte_pci_rte_pci.c.o
+[146/260] Linking static target lib/librte_pci.a
+[147/260] Generating rte_pci_def with a custom command
+[148/260] Generating rte_pci_mingw with a custom command
+[149/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_tm.c.o
+[150/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_flow.c.o
+[151/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline.c.o
+[152/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_cirbuf.c.o
+[153/260] Generating pci.sym_chk with a meson_exe.py custom command
+[154/260] Linking target lib/librte_pci.so.20.0.3
+[155/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse.c.o
+[156/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_ipaddr.c.o
+[157/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_num.c.o
+[158/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_portlist.c.o
+[159/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_etheraddr.c.o
+[160/260] Generating symbol file lib/librte_pci.so.20.0.3.p/librte_pci.so.20.0.3.symbols
+[161/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_socket.c.o
+[162/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_vt100.c.o
+[163/260] Generating rte_cmdline_def with a custom command
+[164/260] Generating rte_cmdline_mingw with a custom command
+[165/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_string.c.o
+[166/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_ethdev.c.o
+[167/260] Linking static target lib/librte_ethdev.a
+[168/260] Compiling C object lib/librte_hash.a.p/librte_hash_rte_fbk_hash.c.o
+[169/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_rdline.c.o
+[170/260] Linking static target lib/librte_cmdline.a
+[171/260] Generating rte_hash_def with a custom command
+[172/260] Generating rte_hash_mingw with a custom command
+[173/260] Generating cmdline.sym_chk with a meson_exe.py custom command
+[174/260] Linking target lib/librte_cmdline.so.20.0.3
+[175/260] Generating rte_compressdev_def with a custom command
+[176/260] Generating rte_compressdev_mingw with a custom command
+[177/260] Compiling C object lib/librte_compressdev.a.p/librte_compressdev_rte_compressdev.c.o
+[178/260] Generating ethdev.sym_chk with a meson_exe.py custom command
+[179/260] Linking target lib/librte_ethdev.so.20.0.3
+[180/260] Compiling C object lib/librte_compressdev.a.p/librte_compressdev_rte_compressdev_pmd.c.o
+[181/260] Generating symbol file lib/librte_ethdev.so.20.0.3.p/librte_ethdev.so.20.0.3.symbols
+[182/260] Compiling C object lib/librte_compressdev.a.p/librte_compressdev_rte_comp.c.o
+[183/260] Linking static target lib/librte_compressdev.a
+[184/260] Compiling C object lib/librte_cryptodev.a.p/librte_cryptodev_rte_cryptodev_pmd.c.o
+[185/260] Generating compressdev.sym_chk with a meson_exe.py custom command
+[186/260] Linking target lib/librte_compressdev.so.20.0.3
+[187/260] Compiling C object lib/librte_cryptodev.a.p/librte_cryptodev_cryptodev_trace_points.c.o
+[188/260] Generating rte_cryptodev_def with a custom command
+[189/260] Generating rte_cryptodev_mingw with a custom command
+[190/260] Compiling C object lib/librte_cryptodev.a.p/librte_cryptodev_rte_cryptodev.c.o
+[191/260] Linking static target lib/librte_cryptodev.a
+[192/260] Compiling C object lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev_rte_cryptodev_pmd.c.o
+[193/260] Generating cryptodev.sym_chk with a meson_exe.py custom command
+[194/260] Compiling C object lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev_cryptodev_trace_points.c.o
+[195/260] Generating rte_reorder_def with a custom command
+[196/260] Generating rte_reorder_mingw with a custom command
+[197/260] Generating rte_security_def with a custom command
+[198/260] Generating rte_security_mingw with a custom command
+[199/260] Compiling C object lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev_rte_cryptodev.c.o
+[200/260] Compiling C object lib/librte_hash.a.p/librte_hash_rte_cuckoo_hash.c.o
+[201/260] Linking static target lib/librte_hash.a
+[202/260] Linking target lib/librte_cryptodev.so.20.0.3
+[203/260] Compiling C object lib/librte_reorder.a.p/librte_reorder_rte_reorder.c.o
+[204/260] Linking static target lib/librte_reorder.a
+[205/260] Generating security.sym_chk with a meson_exe.py custom command
+[206/260] Generating symbol file lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev.so.20.0.3.symbols
+[207/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_fd_man.c.o
+[208/260] Linking target lib/librte_security.so.20.0.3
+[209/260] Generating hash.sym_chk with a meson_exe.py custom command
+[210/260] Generating reorder.sym_chk with a meson_exe.py custom command
+[211/260] Linking target lib/librte_hash.so.20.0.3
+[212/260] Linking target lib/librte_reorder.so.20.0.3
+[213/260] Generating symbol file lib/librte_hash.so.20.0.3.p/librte_hash.so.20.0.3.symbols
+[214/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_iotlb.c.o
+[215/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vdpa.c.o
+[216/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_socket.c.o
+[217/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vhost.c.o
+[218/260] Generating rte_vhost_def with a custom command
+[219/260] Generating rte_vhost_mingw with a custom command
+[220/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_pci_params.c.o
+[221/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_pci_common_uio.c.o
+[222/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vhost_user.c.o
+[223/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_pci_common.c.o
+[224/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_linux_pci_uio.c.o
+[225/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vhost_crypto.c.o
+[226/260] Generating rte_bus_pci_def with a custom command
+[227/260] Generating rte_bus_pci_mingw with a custom command
+[228/260] Compiling C object drivers/libtmp_rte_bus_vdev.a.p/bus_vdev_vdev_params.c.o
+[229/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_linux_pci.c.o
+[230/260] Generating rte_bus_vdev_def with a custom command
+[231/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_linux_pci_vfio.c.o
+[232/260] Generating rte_bus_vdev_mingw with a custom command
+[233/260] Linking static target drivers/libtmp_rte_bus_pci.a
+[234/260] Linking static target drivers/libtmp_rte_mempool_ring.a
+[235/260] Generating rte_mempool_ring.pmd.c with a custom command
+[236/260] Compiling C object drivers/librte_mempool_ring.a.p/meson-generated_.._rte_mempool_ring.pmd.c.o
+[237/260] Generating rte_bus_pci.pmd.c with a custom command
+[238/260] Linking static target drivers/librte_mempool_ring.a
+[239/260] Compiling C object drivers/librte_bus_pci.a.p/meson-generated_.._rte_bus_pci.pmd.c.o
+[240/260] Compiling C object drivers/librte_bus_pci.so.20.0.3.p/meson-generated_.._rte_bus_pci.pmd.c.o
+[241/260] Linking static target drivers/librte_bus_pci.a
+[242/260] Generating rte_mempool_ring_def with a custom command
+[243/260] Generating rte_mempool_ring_mingw with a custom command
+[244/260] Compiling C object drivers/libtmp_rte_bus_vdev.a.p/bus_vdev_vdev.c.o
+[245/260] Linking static target drivers/libtmp_rte_bus_vdev.a
+[246/260] Generating rte_bus_vdev.pmd.c with a custom command
+[247/260] Compiling C object drivers/librte_bus_vdev.a.p/meson-generated_.._rte_bus_vdev.pmd.c.o
+[248/260] Linking static target drivers/librte_bus_vdev.a
+[249/260] Generating rte_bus_pci.sym_chk with a meson_exe.py custom command
+[250/260] Linking target drivers/librte_bus_pci.so.20.0.3
+[251/260] Compiling C object drivers/librte_bus_vdev.so.20.0.3.p/meson-generated_.._rte_bus_vdev.pmd.c.o
+[252/260] Compiling C object drivers/librte_mempool_ring.so.20.0.3.p/meson-generated_.._rte_mempool_ring.pmd.c.o
+[253/260] Generating rte_mempool_ring.sym_chk with a meson_exe.py custom command
+[254/260] Generating rte_bus_vdev.sym_chk with a meson_exe.py custom command
+[255/260] Linking target drivers/librte_mempool_ring.so.20.0.3
+[256/260] Linking target drivers/librte_bus_vdev.so.20.0.3
+[257/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_virtio_net.c.o
+[258/260] Linking static target lib/librte_vhost.a
+[259/260] Generating vhost.sym_chk with a meson_exe.py custom command
+[260/260] Linking target lib/librte_vhost.so.20.0.3
+  CC lib/env_dpdk/env.o
+  CC lib/env_dpdk/memory.o
+  CC lib/ut_mock/mock.o
+  CC lib/log/log.o
+  LIB libspdk_ut_mock.a
+  CC lib/env_dpdk/pci.o
+  CC lib/log/log_flags.o
+  LIB libspdk_log.a
+  CC lib/util/base64.o
+  CC lib/env_dpdk/init.o
+  CC lib/env_dpdk/threads.o
+  CC lib/util/bit_array.o
+  CC lib/env_dpdk/pci_ioat.o
+  CC lib/env_dpdk/pci_virtio.o
+  CC lib/util/cpuset.o
+  CC lib/env_dpdk/pci_vmd.o
+  CC lib/env_dpdk/pci_idxd.o
+  CC lib/util/crc16.o
+  CC lib/vmd/vmd.o
+  LIB libspdk_env_dpdk.a
+  CC lib/util/crc32.o
+  CC lib/ioat/ioat.o
+  CC lib/util/crc32c.o
+  CC lib/util/crc32_ieee.o
+  CC lib/util/dif.o
+  LIB libspdk_ioat.a
+  CC lib/util/fd.o
+  CC lib/util/file.o
+  CC lib/util/iov.o
+  CC lib/util/math.o
+  CC lib/vmd/led.o
+  CC lib/util/pipe.o
+  LIB libspdk_vmd.a
+  CC lib/util/strerror_tls.o
+  CC lib/util/string.o
+  CC lib/util/uuid.o
+  LIB libspdk_util.a
+  CC lib/conf/conf.o
+  CC lib/json/json_parse.o
+  CC lib/json/json_util.o
+  CC lib/thread/thread.o
+  CC lib/json/json_write.o
+  LIB libspdk_conf.a
+  LIB libspdk_thread.a
+  CC lib/blob/blobstore.o
+  CC lib/blob/request.o
+  CC lib/blob/zeroes.o
+  CC lib/blob/blob_bs_dev.o
+  LIB libspdk_json.a
+  CC lib/jsonrpc/jsonrpc_server.o
+  CC lib/accel/accel_engine.o
+  CC lib/virtio/virtio.o
+  CC lib/jsonrpc/jsonrpc_server_tcp.o
+  CC lib/jsonrpc/jsonrpc_client.o
+  LIB libspdk_accel.a
+  CC lib/virtio/virtio_user.o
+  CC lib/virtio/virtio_pci.o
+  CC lib/jsonrpc/jsonrpc_client_tcp.o
+  CC lib/virtio/vhost_user.o
+  LIB libspdk_jsonrpc.a
+  CC lib/rpc/rpc.o
+  LIB libspdk_virtio.a
+  LIB libspdk_rpc.a
+  CC lib/trace/trace.o
+  CC lib/log_rpc/log_rpc.o
+  CC lib/notify/notify.o
+  CC lib/trace/trace_flags.o
+  CC lib/notify/notify_rpc.o
+  LIB libspdk_log_rpc.a
+  CC lib/net/interface.o
+  LIB libspdk_notify.a
+  CC lib/sock/sock.o
+  CC lib/trace/trace_rpc.o
+  CC lib/net/net_rpc.o
+  LIB libspdk_trace.a
+  CC lib/bdev/bdev.o
+  LIB libspdk_net.a
+  CC lib/event/app.o
+  CC lib/sock/net_framework.o
+  CC lib/sock/sock_rpc.o
+  LIB libspdk_sock.a
+  CC lib/event/reactor.o
+  CC lib/event/rpc.o
+  CC lib/event/subsystem.o
+  CC lib/event/json_config.o
+  LIB libspdk_blob.a
+  CC lib/nvme/nvme_ctrlr_cmd.o
+  CC lib/nvme/nvme_ctrlr.o
+  LIB libspdk_event.a
+  CC lib/bdev/bdev_rpc.o
+  CC lib/bdev/bdev_zone.o
+  CC lib/bdev/part.o
+  CC lib/bdev/scsi_nvme.o
+  CC lib/nvme/nvme_fabric.o
+  CC lib/blobfs/blobfs.o
+  CC lib/nvme/nvme_ns_cmd.o
+  CC lib/nvme/nvme_ns.o
+  LIB libspdk_bdev.a
+  CC lib/lvol/lvol.o
+  CC lib/blobfs/tree.o
+  CC lib/nvme/nvme_pcie.o
+  LIB libspdk_blobfs.a
+  CC lib/scsi/dev.o
+  LIB libspdk_lvol.a
+  CC lib/nbd/nbd.o
+  CC lib/scsi/lun.o
+  CC lib/scsi/port.o
+  CC lib/nbd/nbd_rpc.o
+  CC lib/scsi/scsi.o
+  CC lib/scsi/scsi_bdev.o
+  CC lib/scsi/scsi_pr.o
+  LIB libspdk_nbd.a
+  CC lib/ftl/ftl_band.o
+  CC lib/nvme/nvme_qpair.o
+  CC lib/nvme/nvme.o
+  CC lib/ftl/ftl_core.o
+  CC lib/scsi/scsi_rpc.o
+  CC lib/scsi/task.o
+  LIB libspdk_scsi.a
+  CC lib/ftl/ftl_debug.o
+  CC lib/ftl/ftl_io.o
+  CC lib/nvme/nvme_quirks.o
+  CC lib/ftl/ftl_reloc.o
+  CC lib/nvme/nvme_transport.o
+  CC lib/ftl/ftl_restore.o
+  CC lib/ftl/ftl_init.o
+  CC lib/nvme/nvme_uevent.o
+  CC lib/nvme/nvme_ctrlr_ocssd_cmd.o
+  CC lib/nvme/nvme_ns_ocssd_cmd.o
+  CC lib/ftl/ftl_trace.o
+  CC lib/nvme/nvme_tcp.o
+  LIB libspdk_ftl.a
+  CC lib/iscsi/conn.o
+  CC lib/iscsi/init_grp.o
+  CC lib/nvme/nvme_opal.o
+  CC lib/nvme/nvme_io_msg.o
+  CC lib/iscsi/iscsi.o
+  CC lib/nvme/nvme_poll_group.o
+  CC lib/vhost/vhost.o
+  CC lib/vhost/vhost_rpc.o
+  LIB libspdk_nvme.a
+  CC lib/vhost/vhost_scsi.o
+  CC lib/vhost/vhost_blk.o
+  CC lib/vhost/rte_vhost_compat.o
+  CC lib/iscsi/md5.o
+  CC lib/iscsi/param.o
+  CC lib/nvmf/ctrlr.o
+  CC lib/nvmf/ctrlr_discovery.o
+  LIB libspdk_vhost.a
+  CC lib/nvmf/ctrlr_bdev.o
+  CC lib/nvmf/subsystem.o
+  CC lib/iscsi/portal_grp.o
+  CC lib/nvmf/nvmf.o
+  CC lib/iscsi/tgt_node.o
+  CC lib/nvmf/nvmf_rpc.o
+  CC lib/nvmf/transport.o
+  CC lib/nvmf/tcp.o
+  CC lib/iscsi/iscsi_subsystem.o
+  CC lib/iscsi/iscsi_rpc.o
+  CC lib/iscsi/task.o
+  LIB libspdk_iscsi.a
+  LIB libspdk_nvmf.a
+  CC module/env_dpdk/env_dpdk_rpc.o
+  CC module/accel/ioat/accel_engine_ioat.o
+  CC module/blob/bdev/blob_bdev.o
+  CC module/sock/posix/posix.o
+  LIB libspdk_env_dpdk_rpc.a
+  CC module/accel/ioat/accel_engine_ioat_rpc.o
+  LIB libspdk_blob_bdev.a
+  CC module/bdev/delay/vbdev_delay.o
+  CC module/blobfs/bdev/blobfs_bdev.o
+  LIB libspdk_accel_ioat.a
+  CC module/bdev/error/vbdev_error.o
+  CC module/blobfs/bdev/blobfs_bdev_rpc.o
+  LIB libspdk_sock_posix.a
+  CC module/bdev/error/vbdev_error_rpc.o
+  LIB libspdk_blobfs_bdev.a
+  CC module/bdev/delay/vbdev_delay_rpc.o
+  CC module/bdev/gpt/gpt.o
+  CC module/bdev/gpt/vbdev_gpt.o
+  LIB libspdk_bdev_error.a
+  CC module/bdev/lvol/vbdev_lvol.o
+  LIB libspdk_bdev_delay.a
+  CC module/bdev/malloc/bdev_malloc.o
+  CC module/bdev/lvol/vbdev_lvol_rpc.o
+  LIB libspdk_bdev_gpt.a
+  CC module/bdev/null/bdev_null.o
+  CC module/bdev/malloc/bdev_malloc_rpc.o
+  LIB libspdk_bdev_malloc.a
+  CC module/bdev/nvme/bdev_nvme.o
+  CC module/bdev/null/bdev_null_rpc.o
+  CC module/bdev/passthru/vbdev_passthru.o
+  LIB libspdk_bdev_lvol.a
+  CC module/bdev/raid/bdev_raid.o
+  LIB libspdk_bdev_null.a
+  CC module/bdev/rpc/bdev_rpc.o
+  CC module/bdev/passthru/vbdev_passthru_rpc.o
+  LIB libspdk_bdev_rpc.a
+  LIB libspdk_bdev_passthru.a
+  CC module/bdev/split/vbdev_split.o
+  CC module/bdev/zone_block/vbdev_zone_block.o
+  CC module/bdev/raid/bdev_raid_rpc.o
+  CC module/bdev/raid/raid0.o
+  CC module/bdev/split/vbdev_split_rpc.o
+  CC module/bdev/zone_block/vbdev_zone_block_rpc.o
+  LIB libspdk_bdev_split.a
+  LIB libspdk_bdev_raid.a
+  CC module/bdev/aio/bdev_aio.o
+  CC module/bdev/ftl/bdev_ftl.o
+  LIB libspdk_bdev_zone_block.a
+  CC module/bdev/aio/bdev_aio_rpc.o
+  CC module/bdev/nvme/bdev_nvme_rpc.o
+  CC module/bdev/nvme/nvme_rpc.o
+  CC module/bdev/ftl/bdev_ftl_rpc.o
+  LIB libspdk_bdev_aio.a
+  CC module/bdev/virtio/bdev_virtio_scsi.o
+  LIB libspdk_bdev_ftl.a
+  CC module/bdev/virtio/bdev_virtio_blk.o
+  CC module/bdev/nvme/common.o
+  CC module/bdev/nvme/bdev_ocssd.o
+  CC module/bdev/nvme/bdev_ocssd_rpc.o
+  CC module/bdev/virtio/bdev_virtio_rpc.o
+  CC module/bdev/nvme/vbdev_opal.o
+  CC module/bdev/nvme/vbdev_opal_rpc.o
+  LIB libspdk_bdev_virtio.a
+  LIB libspdk_bdev_nvme.a
+  CC module/event/rpc/app_rpc.o
+  CC module/event/subsystems/accel/accel.o
+  CC module/event/subsystems/sock/sock.o
+  CC module/event/subsystems/vmd/vmd.o
+  LIB libspdk_event_sock.a
+  LIB libspdk_event_accel.a
+  CC module/event/rpc/subsystem_rpc.o
+  CC module/event/subsystems/vmd/vmd_rpc.o
+  CC module/event/subsystems/net/net.o
+  LIB libspdk_event_vmd.a
+  LIB libspdk_app_rpc.a
+  CC module/event/subsystems/bdev/bdev.o
+  LIB libspdk_event_net.a
+  LIB libspdk_event_bdev.a
+  CC module/event/subsystems/nbd/nbd.o
+  CC module/event/subsystems/scsi/scsi.o
+  CC module/event/subsystems/nvmf/conf.o
+  CC module/event/subsystems/nvmf/nvmf_rpc.o
+  LIB libspdk_event_nbd.a
+  CC module/event/subsystems/nvmf/nvmf_tgt.o
+  LIB libspdk_event_scsi.a
+  CC module/event/subsystems/iscsi/iscsi.o
+  CC module/event/subsystems/vhost/vhost.o
+  LIB libspdk_event_iscsi.a
+  LIB libspdk_event_vhost.a
+  LIB libspdk_event_nvmf.a
+  CXX app/trace/trace.o
+  CC test/app/bdev_svc/bdev_svc.o
+  CC examples/accel/perf/accel_perf.o
+  CC examples/bdev/hello_world/hello_bdev.o
+  LINK bdev_svc
+  LINK hello_bdev
+  LINK accel_perf
+  CC app/trace_record/trace_record.o
+  CC test/app/fuzz/nvme_fuzz/nvme_fuzz.o
+  CC examples/blob/hello_world/hello_blob.o
+  LINK spdk_trace_record
+  LINK hello_blob
+  CC app/nvmf_tgt/nvmf_main.o
+  LINK nvme_fuzz
+  LINK nvmf_tgt
+  CC examples/blob/cli/blobcli.o
+  CC test/app/fuzz/iscsi_fuzz/iscsi_fuzz.o
+  LINK spdk_trace
+  CC test/app/histogram_perf/histogram_perf.o
+  CXX app/iscsi_top/iscsi_top.o
+  LINK histogram_perf
+  CC app/iscsi_tgt/iscsi_tgt.o
+  LINK blobcli
+  LINK iscsi_tgt
+  CC examples/ioat/perf/perf.o
+  CC app/spdk_tgt/spdk_tgt.o
+  LINK ioat_perf
+  LINK spdk_tgt
+  CC examples/ioat/verify/verify.o
+  LINK iscsi_top
+  CC app/spdk_lspci/spdk_lspci.o
+  LINK verify
+  CC app/spdk_top/spdk_top.o
+  LINK spdk_lspci
+  CC examples/nvme/hello_world/hello_world.o
+  CC examples/nvme/identify/identify.o
+  LINK iscsi_fuzz
+  LINK hello_world
+  CC test/app/fuzz/vhost_fuzz/vhost_fuzz_rpc.o
+  CC app/vhost/vhost.o
+  CC test/app/fuzz/vhost_fuzz/vhost_fuzz.o
+  LINK vhost
+  LINK spdk_top
+  CC app/spdk_dd/spdk_dd.o
+  CC test/bdev/bdevio/bdevio.o
+  LINK vhost_fuzz
+  LINK identify
+  CC test/app/jsoncat/jsoncat.o
+  LINK spdk_dd
+  LINK jsoncat
+  CC examples/nvme/perf/perf.o
+  LINK bdevio
+  CC test/app/stub/stub.o
+  CC test/bdev/bdevperf/bdevperf.o
+  LINK stub
+  CC test/blobfs/mkfs/mkfs.o
+  TEST_HEADER include/spdk/histogram_data.h
+  TEST_HEADER include/spdk/queue.h
+  TEST_HEADER include/spdk/ioat_spec.h
+  TEST_HEADER include/spdk/nvme_intel.h
+  TEST_HEADER include/spdk/bit_array.h
+  TEST_HEADER include/spdk/string.h
+  TEST_HEADER include/spdk/jsonrpc.h
+  TEST_HEADER include/spdk/sock.h
+  TEST_HEADER include/spdk/json.h
+  TEST_HEADER include/spdk/rpc.h
+  TEST_HEADER include/spdk/bit_pool.h
+  TEST_HEADER include/spdk/ioat.h
+  TEST_HEADER include/spdk/blobfs.h
+  TEST_HEADER include/spdk/notify.h
+  LINK mkfs
+  TEST_HEADER include/spdk/pipe.h
+  TEST_HEADER include/spdk/blob_bdev.h
+  TEST_HEADER include/spdk/file.h
+  TEST_HEADER include/spdk/version.h
+  TEST_HEADER include/spdk/config.h
+  TEST_HEADER include/spdk/opal_spec.h
+  TEST_HEADER include/spdk/uuid.h
+  TEST_HEADER include/spdk/bdev.h
+  TEST_HEADER include/spdk/likely.h
+  TEST_HEADER include/spdk/memory.h
+  TEST_HEADER include/spdk/nbd.h
+  TEST_HEADER include/spdk/nvme.h
+  TEST_HEADER include/spdk/env_dpdk.h
+  TEST_HEADER include/spdk/nvmf_spec.h
+  TEST_HEADER include/spdk/iscsi_spec.h
+  TEST_HEADER include/spdk/mmio.h
+  TEST_HEADER include/spdk/vmd.h
+  TEST_HEADER include/spdk/opal.h
+  TEST_HEADER include/spdk/fd.h
+  TEST_HEADER include/spdk/base64.h
+  TEST_HEADER include/spdk/gpt_spec.h
+  TEST_HEADER include/spdk/blobfs_bdev.h
+  TEST_HEADER include/spdk/nvme_ocssd.h
+  TEST_HEADER include/spdk/barrier.h
+  TEST_HEADER include/spdk/nvmf_fc_spec.h
+  TEST_HEADER include/spdk/scsi_spec.h
+  TEST_HEADER include/spdk/nvmf.h
+  TEST_HEADER include/spdk/blob.h
+  TEST_HEADER include/spdk/pci_ids.h
+  TEST_HEADER include/spdk/thread.h
+  TEST_HEADER include/spdk/log.h
+  TEST_HEADER include/spdk/accel_engine.h
+  TEST_HEADER include/spdk/assert.h
+  TEST_HEADER include/spdk/nvme_spec.h
+  TEST_HEADER include/spdk/endian.h
+  TEST_HEADER include/spdk/scsi.h
+  TEST_HEADER include/spdk/util.h
+  TEST_HEADER include/spdk/crc32.h
+  TEST_HEADER include/spdk/event.h
+  TEST_HEADER include/spdk/vhost.h
+  TEST_HEADER include/spdk/bdev_module.h
+  TEST_HEADER include/spdk/nvmf_transport.h
+  TEST_HEADER include/spdk/crc16.h
+  TEST_HEADER include/spdk/bdev_zone.h
+  TEST_HEADER include/spdk/stdinc.h
+  TEST_HEADER include/spdk/dif.h
+  TEST_HEADER include/spdk/trace.h
+  TEST_HEADER include/spdk/idxd.h
+  TEST_HEADER include/spdk/reduce.h
+  TEST_HEADER include/spdk/ftl.h
+  TEST_HEADER include/spdk/net.h
+  TEST_HEADER include/spdk/env.h
+  TEST_HEADER include/spdk/cpuset.h
+  TEST_HEADER include/spdk/nvme_ocssd_spec.h
+  TEST_HEADER include/spdk/conf.h
+  TEST_HEADER include/spdk/nvmf_cmd.h
+  TEST_HEADER include/spdk/lvol.h
+  CXX test/cpp_headers/histogram_data.o
+  CXX test/cpp_headers/queue.o
+  CXX test/cpp_headers/ioat_spec.o
+  CC test/env/mem_callbacks/mem_callbacks.o
+  LINK perf
+  LINK bdevperf
+  CXX test/cpp_headers/nvme_intel.o
+  LINK mem_callbacks
+  CXX test/cpp_headers/bit_array.o
+  CC examples/nvme/reconnect/reconnect.o
+  CC test/env/vtophys/vtophys.o
+  CXX test/cpp_headers/string.o
+  CC test/event/event_perf/event_perf.o
+  CXX test/cpp_headers/jsonrpc.o
+  LINK vtophys
+  LINK event_perf
+  CXX test/cpp_headers/sock.o
+  CC test/env/env_dpdk_post_init/env_dpdk_post_init.o
+  LINK reconnect
+  CXX test/cpp_headers/json.o
+  CC test/event/reactor/reactor.o
+  LINK env_dpdk_post_init
+  CXX test/cpp_headers/rpc.o
+  CC examples/nvme/nvme_manage/nvme_manage.o
+  LINK reactor
+  CXX test/cpp_headers/bit_pool.o
+  CC test/env/memory/memory_ut.o
+  CC test/event/reactor_perf/reactor_perf.o
+  CXX test/cpp_headers/ioat.o
+  LINK reactor_perf
+  CXX test/cpp_headers/blobfs.o
+  CXX test/cpp_headers/notify.o
+  CC test/event/app_repeat/app_repeat.o
+  CXX test/cpp_headers/pipe.o
+  LINK app_repeat
+  CXX test/cpp_headers/blob_bdev.o
+  LINK nvme_manage
+  CC test/env/pci/pci_ut.o
+  CXX test/cpp_headers/file.o
+  CC examples/nvme/arbitration/arbitration.o
+  CXX test/cpp_headers/version.o
+  CXX test/cpp_headers/config.o
+  CXX test/cpp_headers/opal_spec.o
+  LINK memory_ut
+  CXX test/cpp_headers/uuid.o
+  CC examples/nvme/hotplug/hotplug.o
+  CXX test/cpp_headers/bdev.o
+  LINK arbitration
+  LINK hotplug
+  CXX test/cpp_headers/likely.o
+  LINK pci_ut
+  CXX test/cpp_headers/memory.o
+  CC test/rpc_client/rpc_client_test.o
+  CC examples/nvme/cmb_copy/cmb_copy.o
+  CC test/nvme/aer/aer.o
+  CXX test/cpp_headers/nbd.o
+  CXX test/cpp_headers/nvme.o
+  LINK rpc_client_test
+  LINK cmb_copy
+  CXX test/cpp_headers/env_dpdk.o
+  LINK aer
+  CC test/nvme/reset/reset.o
+  CXX test/cpp_headers/nvmf_spec.o
+  CC test/nvme/sgl/sgl.o
+  CC examples/nvme/abort/abort.o
+  CXX test/cpp_headers/iscsi_spec.o
+  CXX test/cpp_headers/mmio.o
+  LINK reset
+  CXX test/cpp_headers/vmd.o
+  LINK sgl
+  CC test/nvme/e2edp/nvme_dp.o
+  CXX test/cpp_headers/opal.o
+  CC test/nvme/overhead/overhead.o
+  LINK abort
+  CXX test/cpp_headers/fd.o
+  LINK nvme_dp
+  CXX test/cpp_headers/base64.o
+  CC examples/sock/hello_world/hello_sock.o
+  LINK overhead
+  CXX test/cpp_headers/gpt_spec.o
+  CC test/nvme/deallocated_value/deallocated_value.o
+  LINK hello_sock
+  CXX test/cpp_headers/blobfs_bdev.o
+  CXX test/cpp_headers/nvme_ocssd.o
+  CC examples/vmd/lsvmd/lsvmd.o
+  LINK deallocated_value
+  CC examples/vmd/led/led.o
+  CXX test/cpp_headers/barrier.o
+  LINK lsvmd
+  CXX test/cpp_headers/nvmf_fc_spec.o
+  LINK led
+  CXX test/cpp_headers/scsi_spec.o
+  CC test/nvme/err_injection/err_injection.o
+  CXX test/cpp_headers/nvmf.o
+  CXX test/cpp_headers/blob.o
+  CC examples/nvmf/nvmf/nvmf.o
+  LINK err_injection
+  CXX test/cpp_headers/pci_ids.o
+  CXX test/cpp_headers/thread.o
+  CXX test/cpp_headers/log.o
+  CXX test/cpp_headers/accel_engine.o
+  CC test/nvme/startup/startup.o
+  CXX test/cpp_headers/assert.o
+  LINK nvmf
+  CXX test/cpp_headers/nvme_spec.o
+  LINK startup
+  CXX test/cpp_headers/endian.o
+  CXX test/cpp_headers/scsi.o
+  CXX test/cpp_headers/util.o
+  CC test/nvme/reserve/reserve.o
+  CXX test/cpp_headers/crc32.o
+  CXX test/cpp_headers/event.o
+  CXX test/cpp_headers/vhost.o
+  CXX test/cpp_headers/bdev_module.o
+  CXX test/cpp_headers/nvmf_transport.o
+  CXX test/cpp_headers/crc16.o
+  LINK reserve
+  CXX test/cpp_headers/bdev_zone.o
+  CXX test/cpp_headers/stdinc.o
+  CXX test/cpp_headers/dif.o
+  CXX test/cpp_headers/trace.o
+  CXX test/cpp_headers/idxd.o
+  CC test/unit/include/spdk/histogram_data.h/histogram_ut.o
+  CXX test/cpp_headers/reduce.o
+  CXX test/cpp_headers/ftl.o
+  CXX test/cpp_headers/net.o
+  CXX test/cpp_headers/env.o
+  LINK histogram_ut
+  CXX test/cpp_headers/cpuset.o
+  CXX test/cpp_headers/nvme_ocssd_spec.o
+  CXX test/cpp_headers/conf.o
+  CC test/unit/lib/bdev/bdev.c/bdev_ut.o
+  CXX test/cpp_headers/nvmf_cmd.o
+  CXX test/cpp_headers/lvol.o
+Makefile:42: "blob_ut.c compilation skipped, only CUnit version 2.1-3 is supported"
+make[4]: 对“all”无需做任何事。
+  CC test/unit/lib/blobfs/tree.c/tree_ut.o
+  CC test/unit/lib/blobfs/blobfs_async_ut/blobfs_async_ut.o
+  CC test/unit/lib/event/subsystem.c/subsystem_ut.o
+  LINK tree_ut
+  CC test/unit/lib/blobfs/blobfs_sync_ut/blobfs_sync_ut.o
+  LINK subsystem_ut
+  CC test/unit/lib/event/app.c/app_ut.o
+  LINK app_ut
+  CC test/unit/lib/event/reactor.c/reactor_ut.o
+  LINK blobfs_async_ut
+  CC test/unit/lib/blobfs/blobfs_bdev.c/blobfs_bdev_ut.o
+  LINK blobfs_sync_ut
+  LINK blobfs_bdev_ut
+  CC test/unit/lib/iscsi/conn.c/conn_ut.o
+  CC test/unit/lib/ioat/ioat.c/ioat_ut.o
+  LINK reactor_ut
+  CC test/unit/lib/json/json_parse.c/json_parse_ut.o
+  LINK ioat_ut
+  CC test/unit/lib/jsonrpc/jsonrpc_server.c/jsonrpc_server_ut.o
+  LINK jsonrpc_server_ut
+  CC test/unit/lib/log/log.c/log_ut.o
+  LINK conn_ut
+  CC test/unit/lib/iscsi/init_grp.c/init_grp_ut.o
+  LINK log_ut
+  CC test/unit/lib/lvol/lvol.c/lvol_ut.o
+  LINK bdev_ut
+  CC test/unit/lib/bdev/part.c/part_ut.o
+  LINK init_grp_ut
+  CC test/unit/lib/iscsi/iscsi.c/iscsi_ut.o
+  LINK lvol_ut
+  LINK json_parse_ut
+  CC test/unit/lib/notify/notify.c/notify_ut.o
+  CC test/unit/lib/json/json_util.c/json_util_ut.o
+  LINK notify_ut
+  CC test/unit/lib/nvme/nvme.c/nvme_ut.o
+  LINK json_util_ut
+  CC test/unit/lib/json/json_write.c/json_write_ut.o
+  LINK part_ut
+  CC test/unit/lib/bdev/scsi_nvme.c/scsi_nvme_ut.o
+  LINK scsi_nvme_ut
+  CC test/unit/lib/bdev/gpt/gpt.c/gpt_ut.o
+  LINK iscsi_ut
+  CC test/unit/lib/iscsi/param.c/param_ut.o
+  LINK gpt_ut
+  CC test/unit/lib/bdev/vbdev_lvol.c/vbdev_lvol_ut.o
+  LINK nvme_ut
+  CC test/unit/lib/nvme/nvme_ctrlr.c/nvme_ctrlr_ut.o
+  LINK param_ut
+  CC test/unit/lib/iscsi/portal_grp.c/portal_grp_ut.o
+  LINK json_write_ut
+  CC test/unit/lib/iscsi/tgt_node.c/tgt_node_ut.o
+  LINK vbdev_lvol_ut
+  CC test/unit/lib/bdev/mt/bdev.c/bdev_ut.o
+  LINK portal_grp_ut
+  CC test/unit/lib/nvmf/tcp.c/tcp_ut.o
+  LINK tgt_node_ut
+  CC test/unit/lib/scsi/dev.c/dev_ut.o
+  LINK nvme_ctrlr_ut
+  CC test/unit/lib/nvme/nvme_ctrlr_cmd.c/nvme_ctrlr_cmd_ut.o
+  LINK dev_ut
+  CC test/unit/lib/scsi/lun.c/lun_ut.o
+  LINK lun_ut
+  CC test/unit/lib/scsi/scsi.c/scsi_ut.o
+  LINK nvme_ctrlr_cmd_ut
+  LINK scsi_ut
+  CC test/unit/lib/nvme/nvme_ctrlr_ocssd_cmd.c/nvme_ctrlr_ocssd_cmd_ut.o
+  CC test/unit/lib/scsi/scsi_bdev.c/scsi_bdev_ut.o
+  LINK tcp_ut
+  CC test/unit/lib/nvmf/ctrlr.c/ctrlr_ut.o
+  LINK bdev_ut
+  CC test/unit/lib/bdev/raid/bdev_raid.c/bdev_raid_ut.o
+  LINK nvme_ctrlr_ocssd_cmd_ut
+  CC test/unit/lib/nvme/nvme_ns.c/nvme_ns_ut.o
+  LINK scsi_bdev_ut
+  CC test/unit/lib/scsi/scsi_pr.c/scsi_pr_ut.o
+  LINK nvme_ns_ut
+  CC test/unit/lib/nvme/nvme_ns_cmd.c/nvme_ns_cmd_ut.o
+  LINK scsi_pr_ut
+  CC test/unit/lib/bdev/bdev_zone.c/bdev_zone_ut.o
+  LINK ctrlr_ut
+  CC test/unit/lib/nvmf/subsystem.c/subsystem_ut.o
+  LINK bdev_zone_ut
+  CC test/unit/lib/bdev/vbdev_zone_block.c/vbdev_zone_block_ut.o
+  LINK bdev_raid_ut
+  CC test/unit/lib/bdev/bdev_ocssd.c/bdev_ocssd_ut.o
+  LINK vbdev_zone_block_ut
+  CC test/unit/lib/nvmf/ctrlr_discovery.c/ctrlr_discovery_ut.o
+  LINK bdev_ocssd_ut
+  CC test/unit/lib/sock/sock.c/sock_ut.o
+  LINK subsystem_ut
+  LINK nvme_ns_cmd_ut
+  CC test/unit/lib/sock/posix.c/posix_ut.o
+  CC test/unit/lib/nvme/nvme_ns_ocssd_cmd.c/nvme_ns_ocssd_cmd_ut.o
+  LINK posix_ut
+  CC test/unit/lib/nvmf/ctrlr_bdev.c/ctrlr_bdev_ut.o
+  LINK ctrlr_discovery_ut
+  CC test/unit/lib/nvme/nvme_pcie.c/nvme_pcie_ut.o
+  LINK sock_ut
+  CC test/unit/lib/thread/thread.c/thread_ut.o
+  LINK ctrlr_bdev_ut
+  CC test/unit/lib/util/base64.c/base64_ut.o
+  LINK base64_ut
+  CC test/unit/lib/util/bit_array.c/bit_array_ut.o
+  LINK nvme_ns_ocssd_cmd_ut
+  CC test/unit/lib/util/cpuset.c/cpuset_ut.o
+  LINK bit_array_ut
+  LINK thread_ut
+  CC test/unit/lib/util/crc16.c/crc16_ut.o
+  CC test/unit/lib/vhost/vhost.c/vhost_ut.o
+  LINK crc16_ut
+  LINK cpuset_ut
+  CC test/unit/lib/util/crc32_ieee.c/crc32_ieee_ut.o
+  CC test/unit/lib/util/crc32c.c/crc32c_ut.o
+  LINK crc32_ieee_ut
+  CC test/unit/lib/ftl/ftl_ppa/ftl_ppa_ut.o
+  LINK nvme_pcie_ut
+  CC test/unit/lib/nvme/nvme_poll_group.c/nvme_poll_group_ut.o
+  LINK crc32c_ut
+  CC test/unit/lib/util/dif.c/dif_ut.o
+  LINK ftl_ppa_ut
+  CC test/unit/lib/ftl/ftl_band.c/ftl_band_ut.o
+  LINK vhost_ut
+  CC test/unit/lib/ftl/ftl_reloc.c/ftl_reloc_ut.o
+  LINK nvme_poll_group_ut
+  CC test/unit/lib/nvme/nvme_qpair.c/nvme_qpair_ut.o
+  LINK ftl_reloc_ut
+  CC test/unit/lib/util/iov.c/iov_ut.o
+  LINK iov_ut
+  LINK ftl_band_ut
+  CC test/unit/lib/util/math.c/math_ut.o
+  CC test/unit/lib/ftl/ftl_wptr/ftl_wptr_ut.o
+  LINK dif_ut
+  CC test/unit/lib/util/pipe.c/pipe_ut.o
+  LINK math_ut
+  CC test/unit/lib/util/string.c/string_ut.o
+  LINK nvme_qpair_ut
+  CC test/unit/lib/nvme/nvme_quirks.c/nvme_quirks_ut.o
+  LINK string_ut
+  CC test/unit/lib/nvme/nvme_tcp.c/nvme_tcp_ut.o
+  LINK pipe_ut
+  CC test/unit/lib/ftl/ftl_md/ftl_md_ut.o
+  LINK nvme_quirks_ut
+  CC test/unit/lib/nvme/nvme_uevent.c/nvme_uevent_ut.o
+  LINK nvme_uevent_ut
+  LINK ftl_md_ut
+  CC test/unit/lib/ftl/ftl_io.c/ftl_io_ut.o
+  LINK ftl_wptr_ut
+  LINK nvme_tcp_ut
+  LINK ftl_io_ut
+make -j 4 SKIP_DPDK_BUILD=1 clean 
+Makefile:42: "blob_ut.c compilation skipped, only CUnit version 2.1-3 is supported"
+make[4]: 对“clean”无需做任何事。
+make -j 4 CONFIG_DEBUG=y CONFIG_WERROR=y SKIP_DPDK_BUILD=1 
+  CC lib/ut_mock/mock.o
+  CC lib/log/log.o
+  CC lib/log/log_flags.o
+  CC lib/env_dpdk/env.o
+  LIB libspdk_ut_mock.a
+  CC lib/env_dpdk/memory.o
+  CC lib/env_dpdk/pci.o
+  LIB libspdk_log.a
+  CC lib/util/base64.o
+  CC lib/util/bit_array.o
+  CC lib/env_dpdk/init.o
+  CC lib/env_dpdk/threads.o
+  CC lib/util/cpuset.o
+  CC lib/env_dpdk/pci_ioat.o
+  CC lib/util/crc16.o
+  CC lib/env_dpdk/pci_virtio.o
+  CC lib/env_dpdk/pci_vmd.o
+  CC lib/env_dpdk/pci_idxd.o
+  CC lib/util/crc32.o
+  CC lib/util/crc32c.o
+  LIB libspdk_env_dpdk.a
+  CC lib/vmd/vmd.o
+  CC lib/util/crc32_ieee.o
+  CC lib/ioat/ioat.o
+  CC lib/util/dif.o
+  LIB libspdk_ioat.a
+  CC lib/util/fd.o
+  CC lib/vmd/led.o
+  CC lib/util/file.o
+  CC lib/util/iov.o
+  LIB libspdk_vmd.a
+  CC lib/util/math.o
+  CC lib/util/pipe.o
+  CC lib/util/strerror_tls.o
+  CC lib/util/string.o
+  CC lib/util/uuid.o
+  LIB libspdk_util.a
+  CC lib/conf/conf.o
+  CC lib/thread/thread.o
+  CC lib/json/json_util.o
+  CC lib/json/json_parse.o
+  CC lib/json/json_write.o
+  LIB libspdk_conf.a
+  LIB libspdk_thread.a
+  CC lib/blob/blobstore.o
+  CC lib/blob/request.o
+  CC lib/blob/zeroes.o
+  LIB libspdk_json.a
+  CC lib/jsonrpc/jsonrpc_server.o
+  CC lib/blob/blob_bs_dev.o
+  CC lib/accel/accel_engine.o
+  CC lib/jsonrpc/jsonrpc_server_tcp.o
+  CC lib/jsonrpc/jsonrpc_client.o
+  CC lib/jsonrpc/jsonrpc_client_tcp.o
+  LIB libspdk_accel.a
+  CC lib/virtio/virtio.o
+  CC lib/virtio/virtio_user.o
+  LIB libspdk_jsonrpc.a
+  CC lib/rpc/rpc.o
+  CC lib/virtio/virtio_pci.o
+  LIB libspdk_rpc.a
+  CC lib/notify/notify.o
+  CC lib/virtio/vhost_user.o
+  CC lib/notify/notify_rpc.o
+  CC lib/trace/trace.o
+  LIB libspdk_virtio.a
+  LIB libspdk_notify.a
+  CC lib/log_rpc/log_rpc.o
+  CC lib/net/interface.o
+  LIB libspdk_blob.a
+  CC lib/trace/trace_flags.o
+  CC lib/sock/sock.o
+  LIB libspdk_log_rpc.a
+  CC lib/net/net_rpc.o
+  CC lib/trace/trace_rpc.o
+  CC lib/lvol/lvol.o
+  LIB libspdk_net.a
+  CC lib/sock/net_framework.o
+  CC lib/sock/sock_rpc.o
+  LIB libspdk_trace.a
+  CC lib/bdev/bdev.o
+  CC lib/bdev/bdev_rpc.o
+  LIB libspdk_sock.a
+  CC lib/blobfs/blobfs.o
+  LIB libspdk_lvol.a
+  CC lib/bdev/bdev_zone.o
+  CC lib/event/app.o
+  CC lib/bdev/part.o
+  CC lib/event/reactor.o
+  CC lib/blobfs/tree.o
+  CC lib/bdev/scsi_nvme.o
+  CC lib/event/rpc.o
+  CC lib/event/subsystem.o
+  LIB libspdk_blobfs.a
+  CC lib/event/json_config.o
+  CC lib/nvme/nvme_ctrlr_cmd.o
+  CC lib/nvme/nvme_ctrlr.o
+  LIB libspdk_event.a
+  LIB libspdk_bdev.a
+  CC lib/nvme/nvme_fabric.o
+  CC lib/scsi/dev.o
+  CC lib/scsi/lun.o
+  CC lib/scsi/port.o
+  CC lib/nvme/nvme_ns_cmd.o
+  CC lib/scsi/scsi.o
+  CC lib/nvme/nvme_ns.o
+  CC lib/scsi/scsi_bdev.o
+  CC lib/nvme/nvme_pcie.o
+  CC lib/scsi/scsi_pr.o
+  CC lib/nvme/nvme_qpair.o
+  CC lib/nvme/nvme.o
+  CC lib/scsi/scsi_rpc.o
+  CC lib/scsi/task.o
+  CC lib/nvme/nvme_quirks.o
+  LIB libspdk_scsi.a
+  CC lib/nbd/nbd.o
+  CC lib/nvme/nvme_transport.o
+  CC lib/nvme/nvme_uevent.o
+  CC lib/nbd/nbd_rpc.o
+  CC lib/nvme/nvme_ctrlr_ocssd_cmd.o
+  LIB libspdk_nbd.a
+  CC lib/nvme/nvme_ns_ocssd_cmd.o
+  CC lib/nvme/nvme_tcp.o
+  CC lib/nvme/nvme_opal.o
+  CC lib/ftl/ftl_band.o
+  CC lib/nvme/nvme_io_msg.o
+  CC lib/ftl/ftl_core.o
+  CC lib/ftl/ftl_debug.o
+  CC lib/nvme/nvme_poll_group.o
+  CC lib/ftl/ftl_io.o
+  CC lib/vhost/vhost.o
+  CC lib/ftl/ftl_reloc.o
+  CC lib/ftl/ftl_restore.o
+  LIB libspdk_nvme.a
+  CC lib/ftl/ftl_init.o
+  CC lib/nvmf/ctrlr.o
+  CC lib/iscsi/conn.o
+  CC lib/ftl/ftl_trace.o
+  CC lib/vhost/vhost_rpc.o
+  CC lib/iscsi/init_grp.o
+  LIB libspdk_ftl.a
+  CC lib/iscsi/iscsi.o
+  CC lib/nvmf/ctrlr_discovery.o
+  CC lib/vhost/vhost_scsi.o
+  CC lib/nvmf/ctrlr_bdev.o
+  CC lib/nvmf/subsystem.o
+  CC lib/nvmf/nvmf.o
+  CC lib/iscsi/md5.o
+  CC lib/iscsi/param.o
+  CC lib/nvmf/nvmf_rpc.o
+  CC lib/vhost/vhost_blk.o
+  CC lib/nvmf/transport.o
+  CC lib/iscsi/portal_grp.o
+  CC lib/nvmf/tcp.o
+  CC lib/iscsi/tgt_node.o
+  CC lib/vhost/rte_vhost_compat.o
+  CC lib/iscsi/iscsi_subsystem.o
+  CC lib/iscsi/iscsi_rpc.o
+  LIB libspdk_nvmf.a
+  CC lib/iscsi/task.o
+  LIB libspdk_vhost.a
+  LIB libspdk_iscsi.a
+  CC module/env_dpdk/env_dpdk_rpc.o
+  CC module/accel/ioat/accel_engine_ioat.o
+  CC module/sock/posix/posix.o
+  CC module/blob/bdev/blob_bdev.o
+  LIB libspdk_env_dpdk_rpc.a
+  CC module/accel/ioat/accel_engine_ioat_rpc.o
+  LIB libspdk_blob_bdev.a
+  LIB libspdk_accel_ioat.a
+  CC module/blobfs/bdev/blobfs_bdev.o
+  CC module/bdev/delay/vbdev_delay.o
+  CC module/bdev/error/vbdev_error.o
+  LIB libspdk_sock_posix.a
+  CC module/bdev/delay/vbdev_delay_rpc.o
+  CC module/blobfs/bdev/blobfs_bdev_rpc.o
+  CC module/bdev/error/vbdev_error_rpc.o
+  LIB libspdk_bdev_delay.a
+  CC module/bdev/gpt/gpt.o
+  CC module/bdev/lvol/vbdev_lvol.o
+  LIB libspdk_blobfs_bdev.a
+  CC module/bdev/lvol/vbdev_lvol_rpc.o
+  LIB libspdk_bdev_error.a
+  CC module/bdev/malloc/bdev_malloc.o
+  CC module/bdev/gpt/vbdev_gpt.o
+  CC module/bdev/malloc/bdev_malloc_rpc.o
+  LIB libspdk_bdev_lvol.a
+  CC module/bdev/nvme/bdev_nvme.o
+  CC module/bdev/null/bdev_null.o
+  LIB libspdk_bdev_gpt.a
+  CC module/bdev/passthru/vbdev_passthru.o
+  LIB libspdk_bdev_malloc.a
+  CC module/bdev/null/bdev_null_rpc.o
+  LIB libspdk_bdev_null.a
+  CC module/bdev/raid/bdev_raid.o
+  CC module/bdev/rpc/bdev_rpc.o
+  CC module/bdev/passthru/vbdev_passthru_rpc.o
+  LIB libspdk_bdev_passthru.a
+  CC module/bdev/nvme/bdev_nvme_rpc.o
+  LIB libspdk_bdev_rpc.a
+  CC module/bdev/raid/bdev_raid_rpc.o
+  CC module/bdev/split/vbdev_split.o
+  CC module/bdev/split/vbdev_split_rpc.o
+  CC module/bdev/nvme/nvme_rpc.o
+  CC module/bdev/raid/raid0.o
+  CC module/bdev/nvme/common.o
+  LIB libspdk_bdev_split.a
+  CC module/bdev/zone_block/vbdev_zone_block.o
+  CC module/bdev/nvme/bdev_ocssd.o
+  LIB libspdk_bdev_raid.a
+  CC module/bdev/nvme/bdev_ocssd_rpc.o
+  CC module/bdev/aio/bdev_aio.o
+  CC module/bdev/zone_block/vbdev_zone_block_rpc.o
+  CC module/bdev/nvme/vbdev_opal.o
+  LIB libspdk_bdev_zone_block.a
+  CC module/bdev/aio/bdev_aio_rpc.o
+  CC module/bdev/ftl/bdev_ftl.o
+  CC module/bdev/nvme/vbdev_opal_rpc.o
+  CC module/bdev/ftl/bdev_ftl_rpc.o
+  LIB libspdk_bdev_aio.a
+  CC module/bdev/virtio/bdev_virtio_scsi.o
+  CC module/bdev/virtio/bdev_virtio_blk.o
+  LIB libspdk_bdev_ftl.a
+  CC module/bdev/virtio/bdev_virtio_rpc.o
+  LIB libspdk_bdev_nvme.a
+  LIB libspdk_bdev_virtio.a
+  CC module/event/rpc/app_rpc.o
+  CC module/event/subsystems/vmd/vmd.o
+  CC module/event/subsystems/sock/sock.o
+  CC module/event/subsystems/accel/accel.o
+  CC module/event/subsystems/vmd/vmd_rpc.o
+  LIB libspdk_event_accel.a
+  LIB libspdk_event_sock.a
+  CC module/event/rpc/subsystem_rpc.o
+  CC module/event/subsystems/net/net.o
+  LIB libspdk_event_vmd.a
+  LIB libspdk_app_rpc.a
+  LIB libspdk_event_net.a
+  CC module/event/subsystems/bdev/bdev.o
+  LIB libspdk_event_bdev.a
+  CC module/event/subsystems/scsi/scsi.o
+  CC module/event/subsystems/nvmf/conf.o
+  CC module/event/subsystems/nvmf/nvmf_rpc.o
+  CC module/event/subsystems/nbd/nbd.o
+  LIB libspdk_event_nbd.a
+  CC module/event/subsystems/nvmf/nvmf_tgt.o
+  LIB libspdk_event_scsi.a
+  CC module/event/subsystems/iscsi/iscsi.o
+  CC module/event/subsystems/vhost/vhost.o
+  LIB libspdk_event_vhost.a
+  LIB libspdk_event_nvmf.a
+  LIB libspdk_event_iscsi.a
+  CXX app/trace/trace.o
+  CC app/trace_record/trace_record.o
+  CC examples/accel/perf/accel_perf.o
+  CC test/app/bdev_svc/bdev_svc.o
+  LINK spdk_trace_record
+  LINK bdev_svc
+  LINK accel_perf
+  CC app/nvmf_tgt/nvmf_main.o
+  LINK nvmf_tgt
+  CC test/app/fuzz/nvme_fuzz/nvme_fuzz.o
+  CC examples/bdev/hello_world/hello_bdev.o
+  CXX app/iscsi_top/iscsi_top.o
+  LINK nvme_fuzz
+  LINK hello_bdev
+  LINK spdk_trace
+  CC test/app/fuzz/iscsi_fuzz/iscsi_fuzz.o
+  CC examples/blob/hello_world/hello_blob.o
+  CC examples/blob/cli/blobcli.o
+  LINK hello_blob
+  LINK blobcli
+  CC app/iscsi_tgt/iscsi_tgt.o
+  LINK iscsi_tgt
+  LINK iscsi_fuzz
+  CC examples/ioat/perf/perf.o
+  LINK iscsi_top
+  LINK ioat_perf
+  CC test/app/fuzz/vhost_fuzz/vhost_fuzz_rpc.o
+  CC app/spdk_tgt/spdk_tgt.o
+  CC examples/ioat/verify/verify.o
+  CC test/app/fuzz/vhost_fuzz/vhost_fuzz.o
+  LINK spdk_tgt
+  CC app/spdk_lspci/spdk_lspci.o
+  LINK spdk_lspci
+  LINK verify
+  LINK vhost_fuzz
+  CC test/app/histogram_perf/histogram_perf.o
+  CC examples/nvme/hello_world/hello_world.o
+  LINK histogram_perf
+  CC test/app/jsoncat/jsoncat.o
+  CC app/spdk_top/spdk_top.o
+  LINK hello_world
+  LINK jsoncat
+  CC examples/sock/hello_world/hello_sock.o
+  CC examples/nvme/identify/identify.o
+  LINK hello_sock
+  CC test/app/stub/stub.o
+  LINK spdk_top
+  LINK stub
+  CC test/bdev/bdevio/bdevio.o
+  CC app/vhost/vhost.o
+  LINK identify
+  CC test/blobfs/mkfs/mkfs.o
+  LINK vhost
+  LINK bdevio
+  LINK mkfs
+  CC examples/nvme/perf/perf.o
+  CC app/spdk_dd/spdk_dd.o
+  CC test/bdev/bdevperf/bdevperf.o
+  TEST_HEADER include/spdk/histogram_data.h
+  TEST_HEADER include/spdk/queue.h
+  TEST_HEADER include/spdk/ioat_spec.h
+  TEST_HEADER include/spdk/nvme_intel.h
+  TEST_HEADER include/spdk/bit_array.h
+  TEST_HEADER include/spdk/string.h
+  TEST_HEADER include/spdk/jsonrpc.h
+  TEST_HEADER include/spdk/sock.h
+  TEST_HEADER include/spdk/json.h
+  TEST_HEADER include/spdk/rpc.h
+  TEST_HEADER include/spdk/bit_pool.h
+  TEST_HEADER include/spdk/ioat.h
+  TEST_HEADER include/spdk/blobfs.h
+  TEST_HEADER include/spdk/notify.h
+  TEST_HEADER include/spdk/pipe.h
+  TEST_HEADER include/spdk/blob_bdev.h
+  TEST_HEADER include/spdk/file.h
+  TEST_HEADER include/spdk/version.h
+  TEST_HEADER include/spdk/config.h
+  TEST_HEADER include/spdk/opal_spec.h
+  TEST_HEADER include/spdk/uuid.h
+  TEST_HEADER include/spdk/bdev.h
+  TEST_HEADER include/spdk/likely.h
+  TEST_HEADER include/spdk/memory.h
+  TEST_HEADER include/spdk/nbd.h
+  TEST_HEADER include/spdk/nvme.h
+  TEST_HEADER include/spdk/env_dpdk.h
+  TEST_HEADER include/spdk/nvmf_spec.h
+  TEST_HEADER include/spdk/iscsi_spec.h
+  TEST_HEADER include/spdk/mmio.h
+  TEST_HEADER include/spdk/vmd.h
+  TEST_HEADER include/spdk/opal.h
+  TEST_HEADER include/spdk/fd.h
+  TEST_HEADER include/spdk/base64.h
+  TEST_HEADER include/spdk/gpt_spec.h
+  TEST_HEADER include/spdk/blobfs_bdev.h
+  TEST_HEADER include/spdk/nvme_ocssd.h
+  TEST_HEADER include/spdk/barrier.h
+  TEST_HEADER include/spdk/nvmf_fc_spec.h
+  TEST_HEADER include/spdk/scsi_spec.h
+  TEST_HEADER include/spdk/nvmf.h
+  TEST_HEADER include/spdk/blob.h
+  TEST_HEADER include/spdk/pci_ids.h
+  TEST_HEADER include/spdk/thread.h
+  TEST_HEADER include/spdk/log.h
+  TEST_HEADER include/spdk/accel_engine.h
+  TEST_HEADER include/spdk/assert.h
+  TEST_HEADER include/spdk/nvme_spec.h
+  TEST_HEADER include/spdk/endian.h
+  TEST_HEADER include/spdk/scsi.h
+  TEST_HEADER include/spdk/util.h
+  TEST_HEADER include/spdk/crc32.h
+  TEST_HEADER include/spdk/event.h
+  TEST_HEADER include/spdk/vhost.h
+  TEST_HEADER include/spdk/bdev_module.h
+  TEST_HEADER include/spdk/nvmf_transport.h
+  TEST_HEADER include/spdk/crc16.h
+  TEST_HEADER include/spdk/bdev_zone.h
+  TEST_HEADER include/spdk/stdinc.h
+  TEST_HEADER include/spdk/dif.h
+  TEST_HEADER include/spdk/trace.h
+  TEST_HEADER include/spdk/idxd.h
+  TEST_HEADER include/spdk/reduce.h
+  TEST_HEADER include/spdk/ftl.h
+  TEST_HEADER include/spdk/net.h
+  TEST_HEADER include/spdk/env.h
+  TEST_HEADER include/spdk/cpuset.h
+  TEST_HEADER include/spdk/nvme_ocssd_spec.h
+  TEST_HEADER include/spdk/conf.h
+  TEST_HEADER include/spdk/nvmf_cmd.h
+  TEST_HEADER include/spdk/lvol.h
+  CXX test/cpp_headers/histogram_data.o
+  LINK perf
+  LINK spdk_dd
+  CXX test/cpp_headers/queue.o
+  CC examples/nvme/reconnect/reconnect.o
+  LINK bdevperf
+  CXX test/cpp_headers/ioat_spec.o
+  CXX test/cpp_headers/nvme_intel.o
+  CXX test/cpp_headers/bit_array.o
+  LINK reconnect
+  CXX test/cpp_headers/string.o
+  CXX test/cpp_headers/jsonrpc.o
+  CXX test/cpp_headers/sock.o
+  CC test/env/mem_callbacks/mem_callbacks.o
+  CXX test/cpp_headers/json.o
+  CC examples/nvme/nvme_manage/nvme_manage.o
+  CXX test/cpp_headers/rpc.o
+  CC examples/nvme/arbitration/arbitration.o
+  LINK mem_callbacks
+  CXX test/cpp_headers/bit_pool.o
+  CXX test/cpp_headers/ioat.o
+  LINK arbitration
+  CC test/env/vtophys/vtophys.o
+  LINK nvme_manage
+  CXX test/cpp_headers/blobfs.o
+  LINK vtophys
+  CXX test/cpp_headers/notify.o
+  CC examples/nvme/hotplug/hotplug.o
+  CC test/env/env_dpdk_post_init/env_dpdk_post_init.o
+  CXX test/cpp_headers/pipe.o
+  CXX test/cpp_headers/blob_bdev.o
+  LINK hotplug
+  LINK env_dpdk_post_init
+  CC test/event/event_perf/event_perf.o
+  CXX test/cpp_headers/file.o
+  CC examples/nvme/cmb_copy/cmb_copy.o
+  LINK event_perf
+  CXX test/cpp_headers/version.o
+  CXX test/cpp_headers/config.o
+  CC test/env/memory/memory_ut.o
+  CXX test/cpp_headers/opal_spec.o
+  LINK cmb_copy
+  CXX test/cpp_headers/uuid.o
+  CC test/event/reactor/reactor.o
+  CXX test/cpp_headers/bdev.o
+  LINK reactor
+  CC examples/nvme/abort/abort.o
+  CXX test/cpp_headers/likely.o
+  LINK memory_ut
+  CC test/event/reactor_perf/reactor_perf.o
+  CC test/env/pci/pci_ut.o
+  LINK abort
+  CXX test/cpp_headers/memory.o
+  LINK reactor_perf
+  CXX test/cpp_headers/nbd.o
+  CXX test/cpp_headers/nvme.o
+  CC examples/vmd/lsvmd/lsvmd.o
+  CC test/event/app_repeat/app_repeat.o
+  LINK pci_ut
+  CXX test/cpp_headers/env_dpdk.o
+  LINK lsvmd
+  LINK app_repeat
+  CXX test/cpp_headers/nvmf_spec.o
+  CC test/nvme/aer/aer.o
+  CC examples/vmd/led/led.o
+  CXX test/cpp_headers/iscsi_spec.o
+  CC test/rpc_client/rpc_client_test.o
+  LINK led
+  LINK aer
+  CXX test/cpp_headers/mmio.o
+  LINK rpc_client_test
+  CC examples/nvmf/nvmf/nvmf.o
+  CXX test/cpp_headers/vmd.o
+  CC test/nvme/reset/reset.o
+  CXX test/cpp_headers/opal.o
+  CC test/unit/include/spdk/histogram_data.h/histogram_ut.o
+  LINK nvmf
+  LINK reset
+  LINK histogram_ut
+  CXX test/cpp_headers/fd.o
+  CC test/unit/lib/bdev/bdev.c/bdev_ut.o
+  CXX test/cpp_headers/base64.o
+  CC test/nvme/sgl/sgl.o
+  CXX test/cpp_headers/gpt_spec.o
+  CXX test/cpp_headers/blobfs_bdev.o
+  LINK sgl
+  CXX test/cpp_headers/nvme_ocssd.o
+  CXX test/cpp_headers/barrier.o
+  CXX test/cpp_headers/nvmf_fc_spec.o
+  CXX test/cpp_headers/scsi_spec.o
+  CC test/nvme/e2edp/nvme_dp.o
+  CC test/nvme/overhead/overhead.o
+  CXX test/cpp_headers/nvmf.o
+  LINK nvme_dp
+  CXX test/cpp_headers/blob.o
+  LINK overhead
+  CXX test/cpp_headers/pci_ids.o
+  CC test/nvme/deallocated_value/deallocated_value.o
+  CXX test/cpp_headers/thread.o
+  CC test/nvme/err_injection/err_injection.o
+  LINK deallocated_value
+  CXX test/cpp_headers/log.o
+  LINK err_injection
+  CXX test/cpp_headers/accel_engine.o
+  CC test/nvme/startup/startup.o
+  CC test/nvme/reserve/reserve.o
+  CXX test/cpp_headers/assert.o
+  LINK startup
+  LINK bdev_ut
+  CXX test/cpp_headers/nvme_spec.o
+  LINK reserve
+  CC test/unit/lib/bdev/part.c/part_ut.o
+  CC test/unit/lib/bdev/scsi_nvme.c/scsi_nvme_ut.o
+  CXX test/cpp_headers/endian.o
+  CXX test/cpp_headers/scsi.o
+  CXX test/cpp_headers/util.o
+  LINK scsi_nvme_ut
+  CXX test/cpp_headers/crc32.o
+  CXX test/cpp_headers/event.o
+  CC test/unit/lib/bdev/gpt/gpt.c/gpt_ut.o
+  CXX test/cpp_headers/vhost.o
+  CXX test/cpp_headers/bdev_module.o
+  CXX test/cpp_headers/nvmf_transport.o
+  CC test/unit/lib/bdev/vbdev_lvol.c/vbdev_lvol_ut.o
+  LINK gpt_ut
+  CXX test/cpp_headers/crc16.o
+  CC test/unit/lib/bdev/mt/bdev.c/bdev_ut.o
+  CXX test/cpp_headers/bdev_zone.o
+  CXX test/cpp_headers/stdinc.o
+  LINK part_ut
+  CXX test/cpp_headers/dif.o
+  CC test/unit/lib/bdev/raid/bdev_raid.c/bdev_raid_ut.o
+  LINK vbdev_lvol_ut
+  CXX test/cpp_headers/trace.o
+  CXX test/cpp_headers/idxd.o
+  CXX test/cpp_headers/reduce.o
+  CXX test/cpp_headers/ftl.o
+  CXX test/cpp_headers/net.o
+  CXX test/cpp_headers/env.o
+  CXX test/cpp_headers/cpuset.o
+  CC test/unit/lib/bdev/bdev_zone.c/bdev_zone_ut.o
+  CXX test/cpp_headers/nvme_ocssd_spec.o
+  CXX test/cpp_headers/conf.o
+  LINK bdev_zone_ut
+  LINK bdev_raid_ut
+  CXX test/cpp_headers/nvmf_cmd.o
+  LINK bdev_ut
+  CC test/unit/lib/bdev/vbdev_zone_block.c/vbdev_zone_block_ut.o
+  CC test/unit/lib/bdev/bdev_ocssd.c/bdev_ocssd_ut.o
+Makefile:42: "blob_ut.c compilation skipped, only CUnit version 2.1-3 is supported"
+make[4]: 对“all”无需做任何事。
+  CC test/unit/lib/blobfs/tree.c/tree_ut.o
+  CXX test/cpp_headers/lvol.o
+  LINK tree_ut
+  CC test/unit/lib/blobfs/blobfs_async_ut/blobfs_async_ut.o
+  CC test/unit/lib/blobfs/blobfs_sync_ut/blobfs_sync_ut.o
+  LINK vbdev_zone_block_ut
+  LINK bdev_ocssd_ut
+  CC test/unit/lib/blobfs/blobfs_bdev.c/blobfs_bdev_ut.o
+  CC test/unit/lib/event/subsystem.c/subsystem_ut.o
+  LINK blobfs_bdev_ut
+  CC test/unit/lib/event/app.c/app_ut.o
+  LINK blobfs_sync_ut
+  LINK blobfs_async_ut
+  LINK subsystem_ut
+  CC test/unit/lib/event/reactor.c/reactor_ut.o
+  CC test/unit/lib/ioat/ioat.c/ioat_ut.o
+  CC test/unit/lib/iscsi/conn.c/conn_ut.o
+  LINK app_ut
+  CC test/unit/lib/iscsi/init_grp.c/init_grp_ut.o
+  LINK ioat_ut
+  LINK reactor_ut
+  CC test/unit/lib/json/json_parse.c/json_parse_ut.o
+  CC test/unit/lib/jsonrpc/jsonrpc_server.c/jsonrpc_server_ut.o
+  LINK conn_ut
+  LINK init_grp_ut
+  CC test/unit/lib/iscsi/iscsi.c/iscsi_ut.o
+  CC test/unit/lib/iscsi/param.c/param_ut.o
+  LINK jsonrpc_server_ut
+  CC test/unit/lib/log/log.c/log_ut.o
+  LINK log_ut
+  LINK param_ut
+  CC test/unit/lib/lvol/lvol.c/lvol_ut.o
+  CC test/unit/lib/iscsi/portal_grp.c/portal_grp_ut.o
+  LINK json_parse_ut
+  CC test/unit/lib/json/json_util.c/json_util_ut.o
+  LINK portal_grp_ut
+  LINK iscsi_ut
+  CC test/unit/lib/iscsi/tgt_node.c/tgt_node_ut.o
+  LINK lvol_ut
+  CC test/unit/lib/json/json_write.c/json_write_ut.o
+  LINK json_util_ut
+  CC test/unit/lib/notify/notify.c/notify_ut.o
+  CC test/unit/lib/nvme/nvme.c/nvme_ut.o
+  LINK notify_ut
+  LINK tgt_node_ut
+  CC test/unit/lib/nvmf/tcp.c/tcp_ut.o
+  CC test/unit/lib/scsi/dev.c/dev_ut.o
+  LINK json_write_ut
+  CC test/unit/lib/sock/sock.c/sock_ut.o
+  LINK dev_ut
+  CC test/unit/lib/scsi/lun.c/lun_ut.o
+  LINK nvme_ut
+  CC test/unit/lib/nvme/nvme_ctrlr.c/nvme_ctrlr_ut.o
+  LINK sock_ut
+  CC test/unit/lib/sock/posix.c/posix_ut.o
+  LINK lun_ut
+  CC test/unit/lib/scsi/scsi.c/scsi_ut.o
+  LINK posix_ut
+  LINK tcp_ut
+  CC test/unit/lib/thread/thread.c/thread_ut.o
+  CC test/unit/lib/nvmf/ctrlr.c/ctrlr_ut.o
+  LINK scsi_ut
+  CC test/unit/lib/scsi/scsi_bdev.c/scsi_bdev_ut.o
+  LINK thread_ut
+  CC test/unit/lib/util/base64.c/base64_ut.o
+  LINK scsi_bdev_ut
+  LINK nvme_ctrlr_ut
+  CC test/unit/lib/scsi/scsi_pr.c/scsi_pr_ut.o
+  CC test/unit/lib/nvme/nvme_ctrlr_cmd.c/nvme_ctrlr_cmd_ut.o
+  LINK base64_ut
+  CC test/unit/lib/util/bit_array.c/bit_array_ut.o
+  LINK ctrlr_ut
+  CC test/unit/lib/nvmf/subsystem.c/subsystem_ut.o
+  LINK bit_array_ut
+  LINK scsi_pr_ut
+  CC test/unit/lib/util/cpuset.c/cpuset_ut.o
+  CC test/unit/lib/nvmf/ctrlr_discovery.c/ctrlr_discovery_ut.o
+  LINK cpuset_ut
+  CC test/unit/lib/util/crc16.c/crc16_ut.o
+  LINK nvme_ctrlr_cmd_ut
+  CC test/unit/lib/nvme/nvme_ctrlr_ocssd_cmd.c/nvme_ctrlr_ocssd_cmd_ut.o
+  LINK crc16_ut
+  CC test/unit/lib/util/crc32_ieee.c/crc32_ieee_ut.o
+  LINK subsystem_ut
+  CC test/unit/lib/vhost/vhost.c/vhost_ut.o
+  LINK crc32_ieee_ut
+  LINK ctrlr_discovery_ut
+  CC test/unit/lib/util/crc32c.c/crc32c_ut.o
+  CC test/unit/lib/nvmf/ctrlr_bdev.c/ctrlr_bdev_ut.o
+  LINK nvme_ctrlr_ocssd_cmd_ut
+  CC test/unit/lib/nvme/nvme_ns.c/nvme_ns_ut.o
+  LINK ctrlr_bdev_ut
+  LINK crc32c_ut
+  CC test/unit/lib/ftl/ftl_ppa/ftl_ppa_ut.o
+  CC test/unit/lib/util/dif.c/dif_ut.o
+  LINK ftl_ppa_ut
+  LINK vhost_ut
+  CC test/unit/lib/ftl/ftl_band.c/ftl_band_ut.o
+  CC test/unit/lib/ftl/ftl_reloc.c/ftl_reloc_ut.o
+  LINK nvme_ns_ut
+  CC test/unit/lib/nvme/nvme_ns_cmd.c/nvme_ns_cmd_ut.o
+  LINK dif_ut
+  CC test/unit/lib/util/iov.c/iov_ut.o
+  LINK ftl_reloc_ut
+  CC test/unit/lib/ftl/ftl_wptr/ftl_wptr_ut.o
+  LINK iov_ut
+  LINK ftl_band_ut
+  CC test/unit/lib/util/math.c/math_ut.o
+  CC test/unit/lib/ftl/ftl_md/ftl_md_ut.o
+  LINK math_ut
+  CC test/unit/lib/util/pipe.c/pipe_ut.o
+  LINK nvme_ns_cmd_ut
+  LINK ftl_md_ut
+  CC test/unit/lib/nvme/nvme_ns_ocssd_cmd.c/nvme_ns_ocssd_cmd_ut.o
+  LINK pipe_ut
+  CC test/unit/lib/ftl/ftl_io.c/ftl_io_ut.o
+  CC test/unit/lib/util/string.c/string_ut.o
+  LINK ftl_wptr_ut
+  CC test/unit/lib/nvme/nvme_pcie.c/nvme_pcie_ut.o
+  LINK string_ut
+  CC test/unit/lib/nvme/nvme_poll_group.c/nvme_poll_group_ut.o
+  LINK nvme_ns_ocssd_cmd_ut
+  CC test/unit/lib/nvme/nvme_qpair.c/nvme_qpair_ut.o
+  LINK nvme_poll_group_ut
+  CC test/unit/lib/nvme/nvme_quirks.c/nvme_quirks_ut.o
+  LINK ftl_io_ut
+  LINK nvme_pcie_ut
+  CC test/unit/lib/nvme/nvme_tcp.c/nvme_tcp_ut.o
+  CC test/unit/lib/nvme/nvme_uevent.c/nvme_uevent_ut.o
+  LINK nvme_uevent_ut
+  LINK nvme_quirks_ut
+  LINK nvme_qpair_ut
+  LINK nvme_tcp_ut
+./test/unit/unittest.sh
++++ dirname ./test/unit/unittest.sh
+++ readlink -f ./test/unit
++ testdir=/home/suh/src/spdk/git/push/tmp/spdk/test/unit
++++ dirname ./test/unit/unittest.sh
+++ readlink -f ./test/unit/../..
++ rootdir=/home/suh/src/spdk/git/push/tmp/spdk
++ source /home/suh/src/spdk/git/push/tmp/spdk/test/common/autotest_common.sh
+++ xtrace_disable
+++ '[' '' '!=' yes ']'
+++ PREV_BASH_OPTS=ehxB
+++ [[ ehxB == *\x* ]]
+++ XTRACE_DISABLED=yes
+++ set +x
+/home/suh/src/spdk/git/push/tmp/spdk/test/common/autotest_common.sh: 行 285: 可用: 语法错误: 需要操作数 (错误符号是 "可用")
+  11:43:35	$ xtrace_enable
+ 11:43:35	$ cd /home/suh/src/spdk/git/push/tmp/spdk
+ 11:43:35	$ '[' -z x ']'
+ 11:43:35	$ hash lcov
+./test/unit/unittest.sh: 第 134 行: hash: lcov: 未找到
+ 11:43:35	$ cov_avail=no
+ 11:43:35	$ '[' no = yes ']'
+  11:43:35	$ uname -m
+ 11:43:35	$ '[' x86_64 = aarch64 ']'
+ 11:43:35	$ run_test unittest_include /home/suh/src/spdk/git/push/tmp/spdk/test/unit/include/spdk/histogram_data.h/histogram_ut
+ 11:43:35	$ '[' 2 -le 1 ']'
+ 11:43:35	$ xtrace_disable
+ 11:43:35	$ '[' '' '!=' yes ']'
+ 11:43:35	$ PREV_BASH_OPTS=ehxBET
+ 11:43:35	$ [[ ehxBET == *\x* ]]
+ 11:43:35	$ XTRACE_DISABLED=yes
+ 11:43:35	$ set +x
+************************************
+START TEST unittest_include
+************************************
+ 11:43:35	$ xtrace_enable
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/include/spdk/histogram_data.h/histogram_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: histogram
+  Test: histogram_test ...passed
+  Test: histogram_merge ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     48     48     48      0      n/a
+
+Elapsed time =    0.001 seconds
+
+real	0m0.004s
+user	0m0.003s
+sys	0m0.000s
+ 11:43:35	$ xtrace_disable
+ 11:43:35	$ '[' no '!=' yes ']'
+ 11:43:35	$ PREV_BASH_OPTS=ehxBET
+ 11:43:35	$ [[ ehxBET == *\x* ]]
+ 11:43:35	$ XTRACE_DISABLED=yes
+ 11:43:35	$ set +x
+************************************
+END TEST unittest_include
+************************************
+ 11:43:35	$ xtrace_enable
+ 11:43:35	$ run_test unittest_bdev unittest_bdev
+ 11:43:35	$ '[' 2 -le 1 ']'
+ 11:43:35	$ xtrace_disable
+ 11:43:35	$ '[' no '!=' yes ']'
+ 11:43:35	$ PREV_BASH_OPTS=ehxBET
+ 11:43:35	$ [[ ehxBET == *\x* ]]
+ 11:43:35	$ XTRACE_DISABLED=yes
+ 11:43:35	$ set +x
+************************************
+START TEST unittest_bdev
+************************************
+ 11:43:35	$ xtrace_enable
+ 11:43:35	$ unittest_bdev
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/bdev.c/bdev_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: bdev
+  Test: bytes_to_blocks_test ...passed
+  Test: num_blocks_test ...passed
+  Test: io_valid_test ...passed
+  Test: open_write_test ...[2020-09-24 11:43:35.678774] /home/suh/src/spdk/git/push/tmp/spdk/lib/bdev/bdev.c:5662:bdev_open: *ERROR*: Could not open bdev1 - bdev_ut module already claimed it
+[2020-09-24 11:43:35.678964] /home/suh/src/spdk/git/push/tmp/spdk/lib/bdev/bdev.c:5662:bdev_open: *ERROR*: Could not open bdev4 - bdev_ut module already claimed it
+[2020-09-24 11:43:35.679006] /home/suh/src/spdk/git/push/tmp/spdk/lib/bdev/bdev.c:5662:bdev_open: *ERROR*: Could not open bdev5 - bdev_ut module already claimed it
+passed
+  Test: alias_add_del_test ...[2020-09-24 11:43:35.679267] /home/suh/src/spdk/git/push/tmp/spdk/lib/bdev/bdev.c:2981:spdk_bdev_alias_add: *ERROR*: Bdev name/alias: bdev0 already exists
+[2020-09-24 11:43:35.679311] /home/suh/src/spdk/git/push/tmp/spdk/lib/bdev/bdev.c:2976:spdk_bdev_alias_add: *ERROR*: Empty alias passed
+[2020-09-24 11:43:35.679329] /home/suh/src/spdk/git/push/tmp/spdk/lib/bdev/bdev.c:2981:spdk_bdev_alias_add: *ERROR*: Bdev name/alias: proper alias 0 already exists
+passed
+  Test: get_device_stat_test ...passed
+  Test: bdev_io_types_test ...passed
+  Test: bdev_io_wait_test ...passed
+  Test: bdev_io_spans_boundary_test ...passed
+  Test: bdev_io_split_test ...passed
+  Test: bdev_io_split_with_io_wait ...passed
+  Test: bdev_io_alignment_with_boundary ...passed
+  Test: bdev_io_alignment ...passed
+  Test: bdev_histograms ...passed
+  Test: bdev_write_zeroes ...passed
+  Test: bdev_compare_and_write ...passed
+  Test: bdev_compare ...passed
+  Test: bdev_open_while_hotremove ...passed
+  Test: bdev_close_while_hotremove ...passed
+  Test: bdev_open_ext ...[2020-09-24 11:43:35.692316] /home/suh/src/spdk/git/push/tmp/spdk/lib/bdev/bdev.c:5731:spdk_bdev_open_ext: *ERROR*: Missing event callback function
+passed
+  Test: bdev_set_io_timeout ...passed
+  Test: lba_range_overlap ...passed
+  Test: lock_lba_range_check_ranges ...passed
+  Test: lock_lba_range_with_io_outstanding ...passed
+  Test: lock_lba_range_overlapped ...passed
+  Test: bdev_io_abort ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     26     26     26      0        0
+             asserts   1424   1424   1424      0      n/a
+
+Elapsed time =    0.020 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/bdev_ocssd.c/bdev_ocssd_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: ocssd
+  Test: test_create_controller ...[2020-09-24 11:43:35.705539] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.706055] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.706409] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.706724] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.707062] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.707508] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.707845] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.708173] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.708506] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.708830] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.709156] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.709555] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.709996] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.710775] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.711675] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.712333] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.713435] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.714080] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.714898] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.715789] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.716454] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.717223] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.717650] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.718170] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.718936] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.720167] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.721352] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.722224] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.723396] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.724274] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.724973] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.725703] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.726202] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1182:bdev_ocssd_create_bdev: *ERROR*: Unable to retrieve namespace 17
+[2020-09-24 11:43:35.726272] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1215:bdev_ocssd_create_bdev: *ERROR*: Invalid parallel unit range
+[2020-09-24 11:43:35.726290] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+[2020-09-24 11:43:35.726398] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1215:bdev_ocssd_create_bdev: *ERROR*: Invalid parallel unit range
+[2020-09-24 11:43:35.726434] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+passed
+  Test: test_device_geometry ...[2020-09-24 11:43:35.726682] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c:1272:bdev_ocssd_create_bdev: *WARNING*: Maximum open chunks per PU is not zero. Reducing the maximum number of open zones: 69 -> 68
+passed
+  Test: test_lba_translation ...passed
+  Test: test_parallel_unit_range ...passed
+  Test: test_get_zone_info ...[2020-09-24 11:43:35.728440] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/nvme/bdev_ocssd.c: 672:bdev_ocssd_get_zone_info: *ERROR*: Unaligned zone LBA: 1
+passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      5      5      5      0        0
+             asserts   2040   2040   2040      0      n/a
+
+Elapsed time =    0.024 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/raid/bdev_raid.c/bdev_raid_ut
+Test Options
+blocklen = 4096, strip_size = 64, max_io_size = 1024, g_max_base_drives = 32, g_max_raids = 2
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: raid
+  Test: test_create_raid ...passed
+  Test: test_delete_raid ...passed
+  Test: test_create_raid_invalid_args ...[2020-09-24 11:43:35.732355] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1240:raid_bdev_create: *ERROR*: Unsupported raid level '-1'
+[2020-09-24 11:43:35.732556] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 785:raid_bdev_config_add: *ERROR*: Invalid strip size 1231
+[2020-09-24 11:43:35.732666] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 780:raid_bdev_config_add: *ERROR*: Duplicate raid bdev name found in config file raid1
+[2020-09-24 11:43:35.732703] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 850:raid_bdev_config_add_base_bdev: *ERROR*: duplicate base bdev name Nvme0n1 mentioned
+[2020-09-24 11:43:35.732787] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 850:raid_bdev_config_add_base_bdev: *ERROR*: duplicate base bdev name Nvme0n1 mentioned
+passed
+  Test: test_delete_raid_invalid_args ...passed
+  Test: test_io_channel ...passed
+  Test: test_reset_io ...passed
+  Test: test_write_io ...passed
+  Test: test_read_io ...passed
+  Test: test_unmap_io ...passed
+  Test: test_io_failure ...[2020-09-24 11:43:35.740921] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 510:raid_bdev_submit_request: *ERROR*: submit request, invalid io type 0
+passed
+  Test: test_multi_raid_no_io ...passed
+  Test: test_multi_raid_with_io ...passed
+  Test: test_io_type_supported ...passed
+  Test: test_create_raid_from_config ...[2020-09-24 11:43:35.741634] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741693] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme0n1'
+[2020-09-24 11:43:35.741718] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741732] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme1n1'
+[2020-09-24 11:43:35.741744] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741755] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme2n1'
+[2020-09-24 11:43:35.741767] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741792] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme3n1'
+[2020-09-24 11:43:35.741805] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741817] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme4n1'
+[2020-09-24 11:43:35.741828] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741840] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme5n1'
+[2020-09-24 11:43:35.741852] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741864] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme6n1'
+[2020-09-24 11:43:35.741875] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741887] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme7n1'
+[2020-09-24 11:43:35.741898] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741910] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme8n1'
+[2020-09-24 11:43:35.741921] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741933] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme9n1'
+[2020-09-24 11:43:35.741944] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741956] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme10n1'
+[2020-09-24 11:43:35.741967] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.741979] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme11n1'
+[2020-09-24 11:43:35.741990] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742001] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme12n1'
+[2020-09-24 11:43:35.742013] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742024] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme13n1'
+[2020-09-24 11:43:35.742041] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742053] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme14n1'
+[2020-09-24 11:43:35.742064] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742076] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme15n1'
+[2020-09-24 11:43:35.742087] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742099] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme16n1'
+[2020-09-24 11:43:35.742110] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742121] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme17n1'
+[2020-09-24 11:43:35.742133] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742144] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme18n1'
+[2020-09-24 11:43:35.742156] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742167] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme19n1'
+[2020-09-24 11:43:35.742178] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742190] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme20n1'
+[2020-09-24 11:43:35.742201] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742228] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme21n1'
+[2020-09-24 11:43:35.742237] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742246] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme22n1'
+[2020-09-24 11:43:35.742298] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742324] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme23n1'
+[2020-09-24 11:43:35.742339] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742354] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme24n1'
+[2020-09-24 11:43:35.742379] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742394] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme25n1'
+[2020-09-24 11:43:35.742410] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742424] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme26n1'
+[2020-09-24 11:43:35.742439] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742454] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme27n1'
+[2020-09-24 11:43:35.742469] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742483] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme28n1'
+[2020-09-24 11:43:35.742498] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742513] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme29n1'
+[2020-09-24 11:43:35.742528] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742543] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme30n1'
+[2020-09-24 11:43:35.742557] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1327:raid_bdev_alloc_base_bdev_resource: *ERROR*: Unable to claim this bdev as it is already claimed
+[2020-09-24 11:43:35.742572] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1632:raid_bdev_add_base_device: *ERROR*: Failed to allocate resource for bdev 'Nvme31n1'
+passed
+  Test: test_create_raid_from_config_invalid_params ...[2020-09-24 11:43:35.742648] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 945:raid_bdev_parse_raid: *ERROR*: raid_name is null
+[2020-09-24 11:43:35.742668] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1044:raid_bdev_parse_config: *ERROR*: Unable to parse raid bdev section
+[2020-09-24 11:43:35.742683] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1212:raid_bdev_init: *ERROR*: raid bdev init failed parsing
+[2020-09-24 11:43:35.742712] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 785:raid_bdev_config_add: *ERROR*: Invalid strip size 1234
+[2020-09-24 11:43:35.742729] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 978:raid_bdev_parse_raid: *ERROR*: Failed to add raid bdev config
+[2020-09-24 11:43:35.742743] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1044:raid_bdev_parse_config: *ERROR*: Unable to parse raid bdev section
+[2020-09-24 11:43:35.742757] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1212:raid_bdev_init: *ERROR*: raid bdev init failed parsing
+[2020-09-24 11:43:35.742785] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 968:raid_bdev_parse_raid: *ERROR*: Invalid RaidLevel
+[2020-09-24 11:43:35.742814] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1044:raid_bdev_parse_config: *ERROR*: Unable to parse raid bdev section
+[2020-09-24 11:43:35.742830] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1212:raid_bdev_init: *ERROR*: raid bdev init failed parsing
+[2020-09-24 11:43:35.742857] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 968:raid_bdev_parse_raid: *ERROR*: Invalid RaidLevel
+[2020-09-24 11:43:35.742873] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1044:raid_bdev_parse_config: *ERROR*: Unable to parse raid bdev section
+[2020-09-24 11:43:35.742888] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1212:raid_bdev_init: *ERROR*: raid bdev init failed parsing
+[2020-09-24 11:43:35.742931] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1003:raid_bdev_parse_raid: *ERROR*: Number of devices mentioned is less than count
+[2020-09-24 11:43:35.742948] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1044:raid_bdev_parse_config: *ERROR*: Unable to parse raid bdev section
+[2020-09-24 11:43:35.742963] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1212:raid_bdev_init: *ERROR*: raid bdev init failed parsing
+[2020-09-24 11:43:35.743003] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 989:raid_bdev_parse_raid: *ERROR*: Number of devices mentioned is more than count
+[2020-09-24 11:43:35.743021] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1044:raid_bdev_parse_config: *ERROR*: Unable to parse raid bdev section
+[2020-09-24 11:43:35.743036] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1212:raid_bdev_init: *ERROR*: raid bdev init failed parsing
+[2020-09-24 11:43:35.743075] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 850:raid_bdev_config_add_base_bdev: *ERROR*: duplicate base bdev name Nvme0n1 mentioned
+[2020-09-24 11:43:35.743093] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c: 996:raid_bdev_parse_raid: *ERROR*: Failed to add base bdev to raid bdev config
+[2020-09-24 11:43:35.743109] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1044:raid_bdev_parse_config: *ERROR*: Unable to parse raid bdev section
+[2020-09-24 11:43:35.743129] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/raid/bdev_raid.c:1212:raid_bdev_init: *ERROR*: raid bdev init failed parsing
+passed
+  Test: test_raid_json_dump_info ...passed
+  Test: test_context_size ...passed
+  Test: test_raid_level_conversions ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     18     18     18      0        0
+             asserts 172843 172843 172843      0      n/a
+
+Elapsed time =    0.011 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/bdev_zone.c/bdev_zone_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: zone
+  Test: test_zone_get_operation ...passed
+  Test: test_bdev_zone_get_info ...passed
+  Test: test_bdev_zone_management ...passed
+  Test: test_bdev_zone_append ...passed
+  Test: test_bdev_zone_append_with_md ...passed
+  Test: test_bdev_io_get_append_location ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      6      6      6      0        0
+             asserts     60     60     60      0      n/a
+
+Elapsed time =    0.000 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/gpt/gpt.c/gpt_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: gpt_parse
+  Test: test_parse_mbr_and_primary ...[2020-09-24 11:43:35.748598] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 287:gpt_parse_mbr: *ERROR*: Gpt and the related buffer should not be NULL
+[2020-09-24 11:43:35.748720] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 287:gpt_parse_mbr: *ERROR*: Gpt and the related buffer should not be NULL
+[2020-09-24 11:43:35.748776] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 193:gpt_read_header: *ERROR*: head_size=1633771873
+[2020-09-24 11:43:35.748795] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 307:gpt_parse_partition_table: *ERROR*: Failed to read gpt header
+[2020-09-24 11:43:35.748812] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 117:gpt_read_partitions: *ERROR*: Num_partition_entries=1633771873 which exceeds max=128
+[2020-09-24 11:43:35.748827] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 313:gpt_parse_partition_table: *ERROR*: Failed to read gpt partitions
+passed
+  Test: test_parse_secondary ...[2020-09-24 11:43:35.749004] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 193:gpt_read_header: *ERROR*: head_size=1633771873
+[2020-09-24 11:43:35.749020] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 307:gpt_parse_partition_table: *ERROR*: Failed to read gpt header
+[2020-09-24 11:43:35.749036] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 117:gpt_read_partitions: *ERROR*: Num_partition_entries=1633771873 which exceeds max=128
+[2020-09-24 11:43:35.749050] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 313:gpt_parse_partition_table: *ERROR*: Failed to read gpt partitions
+passed
+  Test: test_check_mbr ...[2020-09-24 11:43:35.749219] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 287:gpt_parse_mbr: *ERROR*: Gpt and the related buffer should not be NULL
+[2020-09-24 11:43:35.749267] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 287:gpt_parse_mbr: *ERROR*: Gpt and the related buffer should not be NULL
+passed
+  Test: test_read_header ...[2020-09-24 11:43:35.749316] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 193:gpt_read_header: *ERROR*: head_size=600
+[2020-09-24 11:43:35.749334] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 206:gpt_read_header: *ERROR*: head crc32 does not match, provided=584158336, caculated=3316781438
+[2020-09-24 11:43:35.749350] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 212:gpt_read_header: *ERROR*: signature did not match
+[2020-09-24 11:43:35.749366] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 220:gpt_read_header: *ERROR*: head my_lba(7016996765293437281) != expected(1)
+[2020-09-24 11:43:35.749382] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 164:gpt_lba_range_check: *ERROR*: Head's usable_lba_end(7016996765293437281) > lba_end(0)
+[2020-09-24 11:43:35.749397] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 225:gpt_read_header: *ERROR*: lba range check error
+passed
+  Test: test_read_partitions ...[2020-09-24 11:43:35.749421] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 117:gpt_read_partitions: *ERROR*: Num_partition_entries=256 which exceeds max=128
+[2020-09-24 11:43:35.749437] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 124:gpt_read_partitions: *ERROR*: Partition_entry_size(0) != expected(80)
+[2020-09-24 11:43:35.749451] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c:  87:gpt_get_partitions_buf: *ERROR*: Buffer size is not enough
+[2020-09-24 11:43:35.749465] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 133:gpt_read_partitions: *ERROR*: Failed to get gpt partitions buf
+[2020-09-24 11:43:35.749551] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/gpt/gpt.c: 141:gpt_read_partitions: *ERROR*: GPT partition entry array crc32 did not match
+passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      5      5      5      0        0
+             asserts     33     33     33      0      n/a
+
+Elapsed time =    0.001 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/part.c/part_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: bdev_part
+  Test: part_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts      4      4      4      0      n/a
+
+Elapsed time =    0.000 seconds
+[2020-09-24 11:43:35.753300] thread.c: 167:spdk_thread_lib_fini: *ERROR*: io_device test1 not unregistered
+[2020-09-24 11:43:35.753466] thread.c: 167:spdk_thread_lib_fini: *ERROR*: io_device test2 not unregistered
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/scsi_nvme.c/scsi_nvme_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: scsi_nvme_suite
+  Test: scsi_nvme_translate_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     28     28     28      0      n/a
+
+Elapsed time =    0.000 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/vbdev_lvol.c/vbdev_lvol_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: lvol
+  Test: ut_lvs_init ...[2020-09-24 11:43:35.758471] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/lvol/vbdev_lvol.c: 174:_vbdev_lvs_create_cb: *ERROR*: Cannot create lvol store bdev
+[2020-09-24 11:43:35.758620] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/lvol/vbdev_lvol.c: 251:vbdev_lvs_create: *ERROR*: Cannot create blobstore device
+passed
+  Test: ut_lvol_init ...passed
+  Test: ut_lvol_snapshot ...passed
+  Test: ut_lvol_clone ...passed
+  Test: ut_lvs_destroy ...passed
+  Test: ut_lvs_unload ...passed
+  Test: ut_lvol_resize ...[2020-09-24 11:43:35.758815] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/lvol/vbdev_lvol.c:1134:vbdev_lvol_resize: *ERROR*: lvol does not exist
+passed
+  Test: ut_lvol_set_read_only ...passed
+  Test: ut_lvol_hotremove ...passed
+  Test: ut_vbdev_lvol_get_io_channel ...passed
+  Test: ut_vbdev_lvol_io_type_supported ...passed
+  Test: ut_lvol_read_write ...passed
+  Test: ut_vbdev_lvol_submit_request ...passed
+  Test: ut_lvol_examine ...[2020-09-24 11:43:35.758939] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/lvol/vbdev_lvol.c:1228:_vbdev_lvs_examine_finish: *ERROR*: Error opening lvol UNIT_TEST_UUID
+passed
+  Test: ut_lvol_rename ...[2020-09-24 11:43:35.759003] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/lvol/vbdev_lvol.c: 117:_vbdev_lvol_change_bdev_alias: *ERROR*: cannot add alias 'lvs/new_lvol_name'
+[2020-09-24 11:43:35.759021] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/lvol/vbdev_lvol.c:1084:vbdev_lvol_rename: *ERROR*: renaming lvol to 'new_lvol_name' does not succeed
+passed
+  Test: ut_lvol_destroy ...passed
+  Test: ut_lvs_rename ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     17     17     17      0        0
+             asserts    426    426    426      0      n/a
+
+Elapsed time =    0.001 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/vbdev_zone_block.c/vbdev_zone_block_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: zone_block
+  Test: test_zone_block_create ...passed
+  Test: test_zone_block_create_invalid ...[2020-09-24 11:43:35.764885] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 640:zone_block_insert_name: *ERROR*: base bdev Nvme0n1 already claimed
+[2020-09-24 11:43:35.765082] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block_rpc.c:  85:rpc_zone_block_create: *ERROR*: Failed to create block zoned vbdev: File exists[2020-09-24 11:43:35.765119] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 720:zone_block_register: *ERROR*: Base bdev zone_dev1 is already a zoned bdev
+[2020-09-24 11:43:35.765133] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block_rpc.c:  85:rpc_zone_block_create: *ERROR*: Failed to create block zoned vbdev: File exists[2020-09-24 11:43:35.765162] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 858:vbdev_zone_block_create: *ERROR*: Zone capacity can't be 0
+[2020-09-24 11:43:35.765176] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block_rpc.c:  85:rpc_zone_block_create: *ERROR*: Failed to create block zoned vbdev: Invalid argument[2020-09-24 11:43:35.765189] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 863:vbdev_zone_block_create: *ERROR*: Optimal open zones can't be 0
+[2020-09-24 11:43:35.765228] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block_rpc.c:  85:rpc_zone_block_create: *ERROR*: Failed to create block zoned vbdev: Invalid argumentpassed
+  Test: test_get_zone_info ...[2020-09-24 11:43:35.765286] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.765310] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.765323] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+  Test: test_supported_io_types ...passed
+  Test: test_reset_zone ...[2020-09-24 11:43:35.765370] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.765387] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+  Test: test_open_zone ...[2020-09-24 11:43:35.765426] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.765595] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.765612] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+  Test: test_zone_write ...[2020-09-24 11:43:35.765644] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 408:zone_block_write: *ERROR*: Trying to write to zone in invalid state 2
+[2020-09-24 11:43:35.765658] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.765671] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 395:zone_block_write: *ERROR*: Trying to write to invalid zone (lba 0x5000)
+[2020-09-24 11:43:35.765681] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.766052] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 418:zone_block_write: *ERROR*: Trying to write to zone with invalid address (lba 0x407, wp 0x405)
+[2020-09-24 11:43:35.766070] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.766083] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 418:zone_block_write: *ERROR*: Trying to write to zone with invalid address (lba 0x400, wp 0x405)
+[2020-09-24 11:43:35.766093] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.766707] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 426:zone_block_write: *ERROR*: Write exceeds zone capacity (lba 0x1008, len 0x20, wp 0x3f0)
+[2020-09-24 11:43:35.766752] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+  Test: test_zone_read ...[2020-09-24 11:43:35.766827] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 487:zone_block_read: *ERROR*: Read exceeds zone capacity (lba 0x4ff8, len 0x10)
+[2020-09-24 11:43:35.766862] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.766884] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 482:zone_block_read: *ERROR*: Trying to read from invalid zone (lba 0x5000)
+[2020-09-24 11:43:35.766899] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.766952] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 487:zone_block_read: *ERROR*: Read exceeds zone capacity (lba 0x3f8, len 0x10)
+[2020-09-24 11:43:35.766967] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+  Test: test_close_zone ...[2020-09-24 11:43:35.767006] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.767031] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.767083] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.767103] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+  Test: test_finish_zone ...[2020-09-24 11:43:35.767177] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.767464] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+  Test: test_append_zone ...[2020-09-24 11:43:35.767576] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 408:zone_block_write: *ERROR*: Trying to write to zone in invalid state 2
+[2020-09-24 11:43:35.767619] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.767661] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 395:zone_block_write: *ERROR*: Trying to write to invalid zone (lba 0x5000)
+[2020-09-24 11:43:35.767694] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+[2020-09-24 11:43:35.769481] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 426:zone_block_write: *ERROR*: Write exceeds zone capacity (lba 0x1008, len 0x20, wp 0x3f0)
+[2020-09-24 11:43:35.769541] /home/suh/src/spdk/git/push/tmp/spdk/module/bdev/zone_block/vbdev_zone_block.c: 539:zone_block_submit_request: *ERROR*: ERROR on bdev_io submission!
+passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     11     11     11      0        0
+             asserts   3389   3389   3389      0      n/a
+
+Elapsed time =    0.005 seconds
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/bdev/mt/bdev.c/bdev_ut
+
+
+     CUnit - A unit testing framework for C - Version 2.1-2
+     http://cunit.sourceforge.net/
+
+
+Suite: bdev
+  Test: basic ...passed
+  Test: unregister_and_close ...passed
+  Test: basic_qos ...passed
+  Test: put_channel_during_reset ...passed
+  Test: aborted_reset ...passed
+  Test: io_during_reset ...passed
+  Test: io_during_qos_queue ...passed
+  Test: io_during_qos_reset ...passed
+  Test: enomem ...passed
+  Test: enomem_multi_bdev ...passed
+  Test: enomem_multi_io_target ...passed
+  Test: qos_dynamic_enable ...passed
+  Test: bdev_histograms_mt ...passed
+  Test: bdev_set_io_timeout_mt ...passed
+  Test: lock_lba_range_then_submit_io ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     15     15     15      0        0
+             asserts    429    429    429      0      n/a
+
+Elapsed time =    0.038 seconds
+
+real	0m0.137s
+user	0m0.054s
+sys	0m0.083s
+ 11:43:35	$ xtrace_disable
+ 11:43:35	$ '[' no '!=' yes ']'
+ 11:43:35	$ PREV_BASH_OPTS=ehxBET
+ 11:43:35	$ [[ ehxBET == *\x* ]]
+ 11:43:35	$ XTRACE_DISABLED=yes
+ 11:43:35	$ set +x
+************************************
+END TEST unittest_bdev
+************************************
+ 11:43:35	$ xtrace_enable
+ 11:43:35	$ grep -q '#define SPDK_CONFIG_CRYPTO 1' /home/suh/src/spdk/git/push/tmp/spdk/include/spdk/config.h
+ 11:43:35	$ grep -q '#define SPDK_CONFIG_REDUCE 1' /home/suh/src/spdk/git/push/tmp/spdk/include/spdk/config.h
+ 11:43:35	$ grep -q '#define SPDK_CONFIG_PMDK 1' /home/suh/src/spdk/git/push/tmp/spdk/include/spdk/config.h
+ 11:43:35	$ grep -q '#define SPDK_CONFIG_RAID5 1' /home/suh/src/spdk/git/push/tmp/spdk/include/spdk/config.h
+ 11:43:35	$ run_test unittest_blob_blobfs unittest_blob
+ 11:43:35	$ '[' 2 -le 1 ']'
+ 11:43:35	$ xtrace_disable
+ 11:43:35	$ '[' no '!=' yes ']'
+ 11:43:35	$ PREV_BASH_OPTS=ehxBET
+ 11:43:35	$ [[ ehxBET == *\x* ]]
+ 11:43:35	$ XTRACE_DISABLED=yes
+ 11:43:35	$ set +x
+************************************
+START TEST unittest_blob_blobfs
+************************************
+ 11:43:35	$ xtrace_enable
+ 11:43:35	$ unittest_blob
+ 11:43:35	$ /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/blob/blob.c/blob_ut
+./test/unit/unittest.sh: 行 29: /home/suh/src/spdk/git/push/tmp/spdk/test/unit/lib/blob/blob.c/blob_ut: 没有那个文件或目录
+  11:43:35	$ trap - ERR
+  11:43:35	$ print_backtrace
+  11:43:35	$ [[ ehxBET =~ e ]]
+  11:43:35	$ args=("${BASH_ARGV[@]}")
+  11:43:35	$ local args
+  11:43:35	$ xtrace_disable
+  11:43:35	$ '[' no '!=' yes ']'
+  11:43:35	$ PREV_BASH_OPTS=ehxBET
+  11:43:35	$ [[ ehxBET == *\x* ]]
+  11:43:35	$ XTRACE_DISABLED=yes
+  11:43:35	$ set +x
+========== Backtrace start: ==========
+
+in ./test/unit/unittest.sh:29 -> unittest_blob([])
+     ...
+   24  		$valgrind $testdir/lib/bdev/vbdev_zone_block.c/vbdev_zone_block_ut
+   25  		$valgrind $testdir/lib/bdev/mt/bdev.c/bdev_ut
+   26  	}
+   27  	
+   28  	function unittest_blob() {
+=> 29  		$valgrind $testdir/lib/blob/blob.c/blob_ut
+   30  		$valgrind $testdir/lib/blobfs/tree.c/tree_ut
+   31  		$valgrind $testdir/lib/blobfs/blobfs_async_ut/blobfs_async_ut
+   32  		# blobfs_sync_ut hangs when run under valgrind, so don't use $valgrind
+   33  		$testdir/lib/blobfs/blobfs_sync_ut/blobfs_sync_ut
+   34  		$valgrind $testdir/lib/blobfs/blobfs_bdev.c/blobfs_bdev_ut
+     ...
+in /home/suh/src/spdk/git/push/tmp/spdk/test/common/autotest_common.sh:930 -> run_test(["unittest_blob_blobfs"],["unittest_blob"])
+     ...
+   925 		timing_enter $test_name
+   926 		echo "************************************"
+   927 		echo "START TEST $test_name"
+   928 		echo "************************************"
+   929 		xtrace_restore
+=> 930 		time "$@"
+   931 		xtrace_disable
+   932 		echo "************************************"
+   933 		echo "END TEST $test_name"
+   934 		echo "************************************"
+   935 		timing_exit $test_name
+     ...
+in ./test/unit/unittest.sh:181 -> main([])
+     ...
+   176 	
+   177 	if grep -q '#define SPDK_CONFIG_RAID5 1' $rootdir/include/spdk/config.h; then
+   178 		run_test "unittest_bdev_raid5" $valgrind $testdir/lib/bdev/raid/raid5.c/raid5_ut
+   179 	fi
+   180 	
+=> 181 	run_test "unittest_blob_blobfs" unittest_blob
+   182 	run_test "unittest_event" unittest_event
+   183 	if [ $(uname -s) = Linux ]; then
+   184 		run_test "unittest_ftl" unittest_ftl
+   185 	fi
+   186 	
+     ...
+
+========== Backtrace end ==========
+  11:43:35	$ xtrace_enable
+  11:43:35	$ return 0
+
+real	0m0.037s
+user	0m0.020s
+sys	0m0.030s
