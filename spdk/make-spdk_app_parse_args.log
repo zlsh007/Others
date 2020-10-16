@@ -1,0 +1,651 @@
+make -j 4 clean 
+Makefile:42: "blob_ut.c compilation skipped, only CUnit version 2.1-3 is supported"
+make[4]: 对“clean”无需做任何事。
+make -j 4 CONFIG_DEBUG=n CONFIG_WERROR=y 
+The Meson build system
+Version: 0.55.3
+Source dir: /home/suh/src/spdk/git/push/spdk/dpdk
+Build dir: /home/suh/src/spdk/git/push/spdk/dpdk/build-tmp
+Build type: native build
+Program cat found: YES
+Project name: DPDK
+Project version: 20.08.0
+Using 'CC' from environment with value: 'cc'
+Using 'CC' from environment with value: 'cc'
+C compiler for the host machine: cc (gcc 8.3.0 "cc (Ubuntu 8.3.0-26ubuntu1~18.04) 8.3.0")
+C linker for the host machine: cc ld.bfd 2.31.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Program pkg-config found: YES
+Program gen-pmdinfo-cfile.sh found: YES
+Program list-dir-globs.py found: YES
+Program check-symbols.sh found: YES
+Program options-ibverbs-static.sh found: YES
+Program binutils-avx512-check.sh found: YES
+Program python3 found: YES (/usr/bin/python3)
+Program cat found: YES
+Program ../buildtools/symlink-drivers-solibs.sh found: YES (/bin/sh /home/suh/src/spdk/git/push/spdk/dpdk/config/../buildtools/symlink-drivers-solibs.sh)
+Checking for size of "void *" : 8
+Library m found: YES
+Library numa found: YES
+Has header "numaif.h" : YES 
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Found CMake: /usr/bin/cmake (3.12.1)
+Run-time dependency libbsd found: NO (tried pkgconfig and cmake)
+pcap-config found: NO
+Run-time dependency pcap found: NO (tried pkgconfig and config-tool)
+Compiler for C supports arguments -Wextra: YES 
+config/meson.build:223: WARNING: Consider using the built-in warning_level option instead of using "-Wextra".
+Compiler for C supports arguments -Wcast-qual: YES 
+Compiler for C supports arguments -Wdeprecated: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wno-address-of-packed-member -Waddress-of-packed-member: NO 
+Compiler for C supports arguments -Wno-packed-not-aligned -Wpacked-not-aligned: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers -Wmissing-field-initializers: YES 
+Fetching value of define "__SSE4_2__" : 1 
+Fetching value of define "__AES__" :  
+Fetching value of define "__PCLMUL__" : 1 
+Fetching value of define "__AVX__" : 1 
+Fetching value of define "__AVX2__" : 1 
+Fetching value of define "__AVX512F__" :  
+Fetching value of define "__RDRND__" : 1 
+Fetching value of define "__RDSEED__" : 1 
+Compiler for C supports arguments -Wno-format-truncation -Wformat-truncation: YES 
+Message: lib/librte_kvargs: Defining dependency "kvargs"
+Message: lib/librte_telemetry: Defining dependency "telemetry"
+Checking for function "getentropy" : YES 
+Has header "getopt.h" : YES 
+Message: lib/librte_eal: Defining dependency "eal"
+Message: lib/librte_ring: Defining dependency "ring"
+Message: lib/librte_mempool: Defining dependency "mempool"
+Message: lib/librte_mbuf: Defining dependency "mbuf"
+Message: lib/librte_net: Defining dependency "net"
+Message: lib/librte_meter: Defining dependency "meter"
+Message: lib/librte_ethdev: Defining dependency "ethdev"
+Message: lib/librte_pci: Defining dependency "pci"
+Message: lib/librte_cmdline: Defining dependency "cmdline"
+Run-time dependency jansson found: NO (tried pkgconfig and cmake)
+Message: lib/librte_hash: Defining dependency "hash"
+Message: lib/librte_compressdev: Defining dependency "compressdev"
+Message: lib/librte_cryptodev: Defining dependency "cryptodev"
+Message: lib/librte_reorder: Defining dependency "reorder"
+Message: lib/librte_security: Defining dependency "security"
+Has header "linux/userfaultfd.h" : YES 
+Message: lib/librte_vhost: Defining dependency "vhost"
+Run-time dependency libelf found: NO (tried pkgconfig and cmake)
+Compiler for C supports arguments -Wno-format-truncation -Wformat-truncation: YES (cached)
+Message: drivers/bus/pci: Defining dependency "bus_pci"
+Message: drivers/bus/vdev: Defining dependency "bus_vdev"
+Message: drivers/mempool/ring: Defining dependency "mempool_ring"
+Program doxygen found: NO
+Program sphinx-build found: NO
+Library execinfo found: NO
+Configuring rte_build_config.h using configuration
+Message: 
+=================
+Libraries Enabled
+=================
+
+libs:
+	kvargs, telemetry, eal, ring, mempool, mbuf, net, meter, 
+	ethdev, pci, cmdline, hash, compressdev, cryptodev, reorder, security, 
+	vhost, 
+
+Message: 
+===============
+Drivers Enabled
+===============
+
+common:
+	
+bus:
+	pci, vdev, 
+mempool:
+	ring, 
+net:
+	
+raw:
+	
+crypto:
+	
+compress:
+	
+regex:
+	
+vdpa:
+	
+event:
+	
+baseband:
+	
+
+Message: 
+=================
+Content Skipped
+=================
+
+libs:
+	rcu:	not needed by SPDK
+	metrics:	not needed by SPDK
+	timer:	not needed by SPDK
+	acl:	not needed by SPDK
+	bbdev:	not needed by SPDK
+	bitratestats:	not needed by SPDK
+	cfgfile:	not needed by SPDK
+	distributor:	not needed by SPDK
+	efd:	not needed by SPDK
+	eventdev:	not needed by SPDK
+	gro:	not needed by SPDK
+	gso:	not needed by SPDK
+	ip_frag:	not needed by SPDK
+	jobstats:	not needed by SPDK
+	kni:	not needed by SPDK
+	latencystats:	not needed by SPDK
+	lpm:	not needed by SPDK
+	member:	not needed by SPDK
+	power:	not needed by SPDK
+	pdump:	not needed by SPDK
+	rawdev:	not needed by SPDK
+	regexdev:	not needed by SPDK
+	rib:	not needed by SPDK
+	sched:	not needed by SPDK
+	stack:	not needed by SPDK
+	ipsec:	not needed by SPDK
+	fib:	not needed by SPDK
+	port:	not needed by SPDK
+	table:	not needed by SPDK
+	pipeline:	not needed by SPDK
+	flow_classify:	not needed by SPDK
+	bpf:	not needed by SPDK
+	graph:	not needed by SPDK
+	node:	not needed by SPDK
+	
+drivers:
+	common/cpt:	Explicitly disabled via build config
+	common/dpaax:	Explicitly disabled via build config
+	common/iavf:	Explicitly disabled via build config
+	common/mvep:	Explicitly disabled via build config
+	common/octeontx:	Explicitly disabled via build config
+	common/octeontx2:	Explicitly disabled via build config
+	common/qat:	Explicitly disabled via build config
+	bus/dpaa:	Explicitly disabled via build config
+	bus/fslmc:	Explicitly disabled via build config
+	bus/ifpga:	Explicitly disabled via build config
+	bus/vmbus:	Explicitly disabled via build config
+	common/mlx5:	Explicitly disabled via build config
+	mempool/bucket:	Explicitly disabled via build config
+	mempool/dpaa:	Explicitly disabled via build config
+	mempool/dpaa2:	Explicitly disabled via build config
+	mempool/octeontx:	Explicitly disabled via build config
+	mempool/octeontx2:	Explicitly disabled via build config
+	mempool/stack:	Explicitly disabled via build config
+	net/af_packet:	Explicitly disabled via build config
+	net/af_xdp:	Explicitly disabled via build config
+	net/ark:	Explicitly disabled via build config
+	net/atlantic:	Explicitly disabled via build config
+	net/avp:	Explicitly disabled via build config
+	net/axgbe:	Explicitly disabled via build config
+	net/bonding:	Explicitly disabled via build config
+	net/bnx2x:	Explicitly disabled via build config
+	net/bnxt:	Explicitly disabled via build config
+	net/cxgbe:	Explicitly disabled via build config
+	net/dpaa:	Explicitly disabled via build config
+	net/dpaa2:	Explicitly disabled via build config
+	net/e1000:	Explicitly disabled via build config
+	net/ena:	Explicitly disabled via build config
+	net/enetc:	Explicitly disabled via build config
+	net/enic:	Explicitly disabled via build config
+	net/failsafe:	Explicitly disabled via build config
+	net/fm10k:	Explicitly disabled via build config
+	net/i40e:	Explicitly disabled via build config
+	net/hinic:	Explicitly disabled via build config
+	net/hns3:	Explicitly disabled via build config
+	net/iavf:	Explicitly disabled via build config
+	net/ice:	Explicitly disabled via build config
+	net/igc:	Explicitly disabled via build config
+	net/ipn3ke:	Explicitly disabled via build config
+	net/ixgbe:	Explicitly disabled via build config
+	net/kni:	Explicitly disabled via build config
+	net/liquidio:	Explicitly disabled via build config
+	net/memif:	Explicitly disabled via build config
+	net/mlx4:	Explicitly disabled via build config
+	net/mlx5:	Explicitly disabled via build config
+	net/mvneta:	Explicitly disabled via build config
+	net/mvpp2:	Explicitly disabled via build config
+	net/netvsc:	Explicitly disabled via build config
+	net/nfb:	Explicitly disabled via build config
+	net/nfp:	Explicitly disabled via build config
+	net/null:	Explicitly disabled via build config
+	net/octeontx:	Explicitly disabled via build config
+	net/octeontx2:	Explicitly disabled via build config
+	net/pcap:	Explicitly disabled via build config
+	net/pfe:	Explicitly disabled via build config
+	net/qede:	Explicitly disabled via build config
+	net/ring:	Explicitly disabled via build config
+	net/sfc:	Explicitly disabled via build config
+	net/softnic:	Explicitly disabled via build config
+	net/szedata2:	Explicitly disabled via build config
+	net/tap:	Explicitly disabled via build config
+	net/thunderx:	Explicitly disabled via build config
+	net/vdev_netvsc:	Explicitly disabled via build config
+	net/vhost:	Explicitly disabled via build config
+	net/virtio:	Explicitly disabled via build config
+	net/vmxnet3:	Explicitly disabled via build config
+	raw/dpaa2_cmdif:	Explicitly disabled via build config
+	raw/dpaa2_qdma:	Explicitly disabled via build config
+	raw/ifpga:	Explicitly disabled via build config
+	raw/ioat:	Explicitly disabled via build config
+	raw/ntb:	Explicitly disabled via build config
+	raw/octeontx2_dma:	Explicitly disabled via build config
+	raw/octeontx2_ep:	Explicitly disabled via build config
+	raw/skeleton:	Explicitly disabled via build config
+	crypto/aesni_gcm:	Explicitly disabled via build config
+	crypto/aesni_mb:	Explicitly disabled via build config
+	crypto/armv8:	Explicitly disabled via build config
+	crypto/caam_jr:	Explicitly disabled via build config
+	crypto/ccp:	Explicitly disabled via build config
+	crypto/dpaa_sec:	Explicitly disabled via build config
+	crypto/dpaa2_sec:	Explicitly disabled via build config
+	crypto/kasumi:	Explicitly disabled via build config
+	crypto/mvsam:	Explicitly disabled via build config
+	crypto/nitrox:	Explicitly disabled via build config
+	crypto/null:	Explicitly disabled via build config
+	crypto/octeontx:	Explicitly disabled via build config
+	crypto/octeontx2:	Explicitly disabled via build config
+	crypto/openssl:	Explicitly disabled via build config
+	crypto/qat:	Explicitly disabled via build config
+	crypto/scheduler:	Explicitly disabled via build config
+	crypto/snow3g:	Explicitly disabled via build config
+	crypto/virtio:	Explicitly disabled via build config
+	crypto/zuc:	Explicitly disabled via build config
+	compress/isal:	Explicitly disabled via build config
+	compress/octeontx:	Explicitly disabled via build config
+	compress/qat:	Explicitly disabled via build config
+	compress/zlib:	Explicitly disabled via build config
+	regex/mlx5:	Explicitly disabled via build config
+	vdpa/ifc:	Explicitly disabled via build config
+	vdpa/mlx5:	Explicitly disabled via build config
+	event/dpaa:	Explicitly disabled via build config
+	event/dpaa2:	Explicitly disabled via build config
+	event/octeontx2:	Explicitly disabled via build config
+	event/opdl:	Explicitly disabled via build config
+	event/skeleton:	Explicitly disabled via build config
+	event/sw:	Explicitly disabled via build config
+	event/dsw:	Explicitly disabled via build config
+	event/octeontx:	Explicitly disabled via build config
+	baseband/null:	Explicitly disabled via build config
+	baseband/turbo_sw:	Explicitly disabled via build config
+	baseband/fpga_lte_fec:	Explicitly disabled via build config
+	baseband/fpga_5gnr_fec:	Explicitly disabled via build config
+	
+
+Build targets in project: 108
+
+Found ninja-1.8.2 at /usr/bin/ninja
+ninja: Entering directory `/home/suh/src/spdk/git/push/spdk/dpdk/build-tmp'
+[1/260] Generating rte_kvargs_mingw with a custom command
+[2/260] Generating rte_kvargs_def with a custom command
+[3/260] Compiling C object lib/librte_kvargs.a.p/librte_kvargs_rte_kvargs.c.o
+[4/260] Compiling C object lib/librte_telemetry.a.p/librte_telemetry_telemetry_data.c.o
+[5/260] Linking static target lib/librte_kvargs.a
+[6/260] Compiling C object buildtools/pmdinfogen/pmdinfogen.p/pmdinfogen.c.o
+[7/260] Linking target buildtools/pmdinfogen/pmdinfogen
+[8/260] Compiling C object lib/librte_telemetry.a.p/librte_telemetry_telemetry_legacy.c.o
+[9/260] Generating rte_telemetry_def with a custom command
+[10/260] Compiling C object lib/librte_telemetry.a.p/librte_telemetry_telemetry.c.o
+[11/260] Linking static target lib/librte_telemetry.a
+[12/260] Generating rte_telemetry_mingw with a custom command
+[13/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_cpuflags.c.o
+[14/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_errno.c.o
+[15/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_bus.c.o
+[16/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_class.c.o
+[17/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_config.c.o
+[18/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_debug.c.o
+[19/260] Generating kvargs.sym_chk with a meson_exe.py custom command
+[20/260] Linking target lib/librte_kvargs.so.20.0.3
+[21/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_devargs.c.o
+[22/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_dev.c.o
+[23/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_hypervisor.c.o
+[24/260] Generating telemetry.sym_chk with a meson_exe.py custom command
+[25/260] Linking target lib/librte_telemetry.so.20.0.3
+[26/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_hexdump.c.o
+[27/260] Generating symbol file lib/librte_kvargs.so.20.0.3.p/librte_kvargs.so.20.0.3.symbols
+[28/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_launch.c.o
+[29/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_mcfg.c.o
+[30/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_fbarray.c.o
+[31/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_lcore.c.o
+[32/260] Generating symbol file lib/librte_telemetry.so.20.0.3.p/librte_telemetry.so.20.0.3.symbols
+[33/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_log.c.o
+[34/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_memalloc.c.o
+[35/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_memzone.c.o
+[36/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_string_fns.c.o
+[37/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_memory.c.o
+[38/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_tailqs.c.o
+[39/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_timer.c.o
+[40/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_thread.c.o
+[41/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_proc.c.o
+[42/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace_ctf.c.o
+[43/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace.c.o
+[44/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace_points.c.o
+[45/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_uuid.c.o
+[46/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_trace_utils.c.o
+[47/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_hotplug_mp.c.o
+[48/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_options.c.o
+[49/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_malloc_elem.c.o
+[50/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_keepalive.c.o
+[51/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_malloc_mp.c.o
+[52/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_reciprocal.c.o
+[53/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_malloc_heap.c.o
+[54/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_malloc.c.o
+[55/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_service.c.o
+[56/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_eal_common_dynmem.c.o
+[57/260] Compiling C object lib/librte_eal.a.p/librte_eal_unix_eal_file.c.o
+[58/260] Compiling C object lib/librte_eal.a.p/librte_eal_common_rte_random.c.o
+[59/260] Compiling C object lib/librte_eal.a.p/librte_eal_unix_eal_unix_timer.c.o
+[60/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_debug.c.o
+[61/260] Compiling C object lib/librte_eal.a.p/librte_eal_unix_eal_unix_memory.c.o
+[62/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_alarm.c.o
+[63/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_cpuflags.c.o
+[64/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_dev.c.o
+[65/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal.c.o
+[66/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_hugepage_info.c.o
+[67/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_log.c.o
+[68/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_lcore.c.o
+[69/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_thread.c.o
+[70/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_interrupts.c.o
+[71/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_timer.c.o
+[72/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_memalloc.c.o
+[73/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_cpuflags.c.o
+[74/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_vfio_mp_sync.c.o
+[75/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_spinlock.c.o
+[76/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_memory.c.o
+[77/260] Generating rte_ring_mingw with a custom command
+[78/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_cycles.c.o
+[79/260] Generating rte_eal_def with a custom command
+[80/260] Compiling C object lib/librte_eal.a.p/librte_eal_x86_rte_hypervisor.c.o
+[81/260] Generating rte_ring_def with a custom command
+[82/260] Generating rte_eal_mingw with a custom command
+[83/260] Compiling C object lib/librte_ring.a.p/librte_ring_rte_ring.c.o
+[84/260] Linking static target lib/librte_ring.a
+[85/260] Compiling C object lib/librte_eal.a.p/librte_eal_linux_eal_vfio.c.o
+[86/260] Linking static target lib/librte_eal.a
+[87/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_rte_mempool_ops.c.o
+[88/260] Generating ring.sym_chk with a meson_exe.py custom command
+[89/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_rte_mempool.c.o
+[90/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_rte_mempool_ops_default.c.o
+[91/260] Generating rte_mempool_def with a custom command
+[92/260] Generating rte_mempool_mingw with a custom command
+[93/260] Compiling C object lib/librte_security.a.p/librte_security_rte_security.c.o
+[94/260] Linking static target lib/librte_security.a
+[95/260] Compiling C object lib/librte_mempool.a.p/librte_mempool_mempool_trace_points.c.o
+[96/260] Linking static target lib/librte_mempool.a
+[97/260] Generating eal.sym_chk with a meson_exe.py custom command
+[98/260] Generating mempool.sym_chk with a meson_exe.py custom command
+[99/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_rte_mempool.c.o
+[100/260] Linking target lib/librte_eal.so.20.0.3
+[101/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf.c.o
+[102/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_rte_mempool_ops_default.c.o
+[103/260] Generating symbol file lib/librte_eal.so.20.0.3.p/librte_eal.so.20.0.3.symbols
+[104/260] Generating rte_mbuf_def with a custom command
+[105/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_rte_mempool_ops.c.o
+[106/260] Linking target lib/librte_ring.so.20.0.3
+[107/260] Compiling C object lib/librte_mempool.so.20.0.3.p/librte_mempool_mempool_trace_points.c.o
+[108/260] Generating symbol file lib/librte_ring.so.20.0.3.p/librte_ring.so.20.0.3.symbols
+[109/260] Linking target lib/librte_mempool.so.20.0.3
+[110/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf_pool_ops.c.o
+[111/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf_ptype.c.o
+[112/260] Generating rte_mbuf_mingw with a custom command
+[113/260] Generating rte_net_def with a custom command
+[114/260] Compiling C object lib/librte_mbuf.a.p/librte_mbuf_rte_mbuf_dyn.c.o
+[115/260] Linking static target lib/librte_mbuf.a
+[116/260] Generating symbol file lib/librte_mempool.so.20.0.3.p/librte_mempool.so.20.0.3.symbols
+[117/260] Compiling C object lib/librte_net.a.p/librte_net_rte_ether.c.o
+[118/260] Compiling C object lib/librte_net.a.p/librte_net_rte_arp.c.o
+[119/260] Generating rte_net_mingw with a custom command
+[120/260] Compiling C object lib/librte_meter.a.p/librte_meter_rte_meter.c.o
+[121/260] Linking static target lib/librte_meter.a
+[122/260] Generating mbuf.sym_chk with a meson_exe.py custom command
+[123/260] Linking target lib/librte_mbuf.so.20.0.3
+[124/260] Compiling C object lib/librte_net.a.p/librte_net_rte_net_crc.c.o
+[125/260] Compiling C object lib/librte_net.a.p/librte_net_rte_net.c.o
+[126/260] Linking static target lib/librte_net.a
+[127/260] Generating rte_meter_def with a custom command
+[128/260] Generating rte_meter_mingw with a custom command
+[129/260] Generating symbol file lib/librte_mbuf.so.20.0.3.p/librte_mbuf.so.20.0.3.symbols
+[130/260] Generating net.sym_chk with a meson_exe.py custom command
+[131/260] Compiling C object lib/librte_meter.so.20.0.3.p/librte_meter_rte_meter.c.o
+[132/260] Linking target lib/librte_net.so.20.0.3
+[133/260] Generating meter.sym_chk with a meson_exe.py custom command
+[134/260] Linking target lib/librte_meter.so.20.0.3
+[135/260] Compiling C object drivers/libtmp_rte_mempool_ring.a.p/mempool_ring_rte_mempool_ring.c.o
+[136/260] Generating symbol file lib/librte_net.so.20.0.3.p/librte_net.so.20.0.3.symbols
+[137/260] Generating symbol file lib/librte_meter.so.20.0.3.p/librte_meter.so.20.0.3.symbols
+[138/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_ethdev_private.c.o
+[139/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_ethdev_profile.c.o
+[140/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_ethdev_trace_points.c.o
+[141/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_class_eth.c.o
+[142/260] Generating rte_ethdev_def with a custom command
+[143/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_mtr.c.o
+[144/260] Generating rte_ethdev_mingw with a custom command
+[145/260] Compiling C object lib/librte_pci.a.p/librte_pci_rte_pci.c.o
+[146/260] Linking static target lib/librte_pci.a
+[147/260] Generating rte_pci_def with a custom command
+[148/260] Generating rte_pci_mingw with a custom command
+[149/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_tm.c.o
+[150/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline.c.o
+[151/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_flow.c.o
+[152/260] Generating pci.sym_chk with a meson_exe.py custom command
+[153/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_cirbuf.c.o
+[154/260] Linking target lib/librte_pci.so.20.0.3
+[155/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse.c.o
+[156/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_ipaddr.c.o
+[157/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_num.c.o
+[158/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_etheraddr.c.o
+[159/260] Generating symbol file lib/librte_pci.so.20.0.3.p/librte_pci.so.20.0.3.symbols
+[160/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_vt100.c.o
+[161/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_portlist.c.o
+[162/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_socket.c.o
+[163/260] Generating rte_cmdline_def with a custom command
+[164/260] Generating rte_cmdline_mingw with a custom command
+[165/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_parse_string.c.o
+[166/260] Compiling C object lib/librte_cmdline.a.p/librte_cmdline_cmdline_rdline.c.o
+[167/260] Linking static target lib/librte_cmdline.a
+[168/260] Compiling C object lib/librte_hash.a.p/librte_hash_rte_fbk_hash.c.o
+[169/260] Compiling C object lib/librte_ethdev.a.p/librte_ethdev_rte_ethdev.c.o
+[170/260] Generating rte_hash_def with a custom command
+[171/260] Linking static target lib/librte_ethdev.a
+[172/260] Generating rte_hash_mingw with a custom command
+[173/260] Generating cmdline.sym_chk with a meson_exe.py custom command
+[174/260] Linking target lib/librte_cmdline.so.20.0.3
+[175/260] Generating rte_compressdev_def with a custom command
+[176/260] Generating rte_compressdev_mingw with a custom command
+[177/260] Compiling C object lib/librte_compressdev.a.p/librte_compressdev_rte_compressdev.c.o
+[178/260] Compiling C object lib/librte_compressdev.a.p/librte_compressdev_rte_compressdev_pmd.c.o
+[179/260] Compiling C object lib/librte_compressdev.a.p/librte_compressdev_rte_comp.c.o
+[180/260] Linking static target lib/librte_compressdev.a
+[181/260] Generating ethdev.sym_chk with a meson_exe.py custom command
+[182/260] Linking target lib/librte_ethdev.so.20.0.3
+[183/260] Generating symbol file lib/librte_ethdev.so.20.0.3.p/librte_ethdev.so.20.0.3.symbols
+[184/260] Generating compressdev.sym_chk with a meson_exe.py custom command
+[185/260] Linking target lib/librte_compressdev.so.20.0.3
+[186/260] Generating rte_cryptodev_def with a custom command
+[187/260] Compiling C object lib/librte_cryptodev.a.p/librte_cryptodev_rte_cryptodev.c.o
+[188/260] Generating rte_cryptodev_mingw with a custom command
+[189/260] Compiling C object lib/librte_cryptodev.a.p/librte_cryptodev_rte_cryptodev_pmd.c.o
+[190/260] Compiling C object lib/librte_cryptodev.a.p/librte_cryptodev_cryptodev_trace_points.c.o
+[191/260] Linking static target lib/librte_cryptodev.a
+[192/260] Compiling C object lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev_rte_cryptodev_pmd.c.o
+[193/260] Generating cryptodev.sym_chk with a meson_exe.py custom command
+[194/260] Compiling C object lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev_cryptodev_trace_points.c.o
+[195/260] Generating rte_reorder_def with a custom command
+[196/260] Generating rte_reorder_mingw with a custom command
+[197/260] Compiling C object lib/librte_hash.a.p/librte_hash_rte_cuckoo_hash.c.o
+[198/260] Linking static target lib/librte_hash.a
+[199/260] Generating rte_security_def with a custom command
+[200/260] Generating rte_security_mingw with a custom command
+[201/260] Compiling C object lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev_rte_cryptodev.c.o
+[202/260] Linking target lib/librte_cryptodev.so.20.0.3
+[203/260] Compiling C object lib/librte_reorder.a.p/librte_reorder_rte_reorder.c.o
+[204/260] Linking static target lib/librte_reorder.a
+[205/260] Generating hash.sym_chk with a meson_exe.py custom command
+[206/260] Linking target lib/librte_hash.so.20.0.3
+[207/260] Generating security.sym_chk with a meson_exe.py custom command
+[208/260] Generating symbol file lib/librte_cryptodev.so.20.0.3.p/librte_cryptodev.so.20.0.3.symbols
+[209/260] Linking target lib/librte_security.so.20.0.3
+[210/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_fd_man.c.o
+[211/260] Generating reorder.sym_chk with a meson_exe.py custom command
+[212/260] Linking target lib/librte_reorder.so.20.0.3
+[213/260] Generating symbol file lib/librte_hash.so.20.0.3.p/librte_hash.so.20.0.3.symbols
+[214/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_iotlb.c.o
+[215/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vdpa.c.o
+[216/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_socket.c.o
+[217/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vhost.c.o
+[218/260] Generating rte_vhost_def with a custom command
+[219/260] Generating rte_vhost_mingw with a custom command
+[220/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_pci_params.c.o
+[221/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_pci_common_uio.c.o
+[222/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_pci_common.c.o
+[223/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vhost_user.c.o
+[224/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_linux_pci.c.o
+[225/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_linux_pci_uio.c.o
+[226/260] Generating rte_bus_pci_def with a custom command
+[227/260] Generating rte_bus_pci_mingw with a custom command
+[228/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_vhost_crypto.c.o
+[229/260] Compiling C object drivers/libtmp_rte_bus_vdev.a.p/bus_vdev_vdev_params.c.o
+[230/260] Generating rte_bus_vdev_def with a custom command
+[231/260] Generating rte_bus_vdev_mingw with a custom command
+[232/260] Linking static target drivers/libtmp_rte_mempool_ring.a
+[233/260] Generating rte_mempool_ring.pmd.c with a custom command
+[234/260] Compiling C object drivers/librte_mempool_ring.a.p/meson-generated_.._rte_mempool_ring.pmd.c.o
+[235/260] Linking static target drivers/librte_mempool_ring.a
+[236/260] Generating rte_mempool_ring_def with a custom command
+[237/260] Generating rte_mempool_ring_mingw with a custom command
+[238/260] Compiling C object drivers/libtmp_rte_bus_vdev.a.p/bus_vdev_vdev.c.o
+[239/260] Linking static target drivers/libtmp_rte_bus_vdev.a
+[240/260] Generating rte_bus_vdev.pmd.c with a custom command
+[241/260] Compiling C object drivers/libtmp_rte_bus_pci.a.p/bus_pci_linux_pci_vfio.c.o
+[242/260] Linking static target drivers/libtmp_rte_bus_pci.a
+[243/260] Compiling C object drivers/librte_bus_vdev.a.p/meson-generated_.._rte_bus_vdev.pmd.c.o
+[244/260] Linking static target drivers/librte_bus_vdev.a
+[245/260] Generating rte_bus_pci.pmd.c with a custom command
+[246/260] Compiling C object drivers/librte_bus_pci.a.p/meson-generated_.._rte_bus_pci.pmd.c.o
+[247/260] Linking static target drivers/librte_bus_pci.a
+[248/260] Generating rte_mempool_ring.sym_chk with a meson_exe.py custom command
+[249/260] Compiling C object drivers/librte_bus_pci.so.20.0.3.p/meson-generated_.._rte_bus_pci.pmd.c.o
+[250/260] Compiling C object drivers/librte_bus_vdev.so.20.0.3.p/meson-generated_.._rte_bus_vdev.pmd.c.o
+[251/260] Generating rte_bus_vdev.sym_chk with a meson_exe.py custom command
+[252/260] Compiling C object drivers/librte_mempool_ring.so.20.0.3.p/meson-generated_.._rte_mempool_ring.pmd.c.o
+[253/260] Linking target drivers/librte_bus_vdev.so.20.0.3
+[254/260] Linking target drivers/librte_mempool_ring.so.20.0.3
+[255/260] Generating rte_bus_pci.sym_chk with a meson_exe.py custom command
+[256/260] Linking target drivers/librte_bus_pci.so.20.0.3
+[257/260] Compiling C object lib/librte_vhost.a.p/librte_vhost_virtio_net.c.o
+[258/260] Linking static target lib/librte_vhost.a
+[259/260] Generating vhost.sym_chk with a meson_exe.py custom command
+[260/260] Linking target lib/librte_vhost.so.20.0.3
+  CC lib/log/log.o
+  CC lib/ut_mock/mock.o
+  CC lib/log/log_flags.o
+  CC lib/env_dpdk/env.o
+  LIB libspdk_ut_mock.a
+  CC lib/env_dpdk/memory.o
+  CC lib/env_dpdk/pci.o
+  LIB libspdk_log.a
+  CC lib/util/base64.o
+  CC lib/util/bit_array.o
+  CC lib/env_dpdk/init.o
+  CC lib/util/cpuset.o
+  CC lib/vmd/vmd.o
+  CC lib/util/crc16.o
+  CC lib/env_dpdk/threads.o
+  CC lib/util/crc32.o
+  CC lib/util/crc32c.o
+  CC lib/env_dpdk/pci_ioat.o
+  CC lib/env_dpdk/pci_virtio.o
+  CC lib/env_dpdk/pci_vmd.o
+  CC lib/ioat/ioat.o
+  CC lib/env_dpdk/pci_idxd.o
+  CC lib/vmd/led.o
+  LIB libspdk_env_dpdk.a
+  CC lib/util/crc32_ieee.o
+  CC lib/util/dif.o
+  LIB libspdk_vmd.a
+  CC lib/util/fd.o
+  CC lib/util/file.o
+  LIB libspdk_ioat.a
+  CC lib/util/iov.o
+  CC lib/util/math.o
+  CC lib/util/pipe.o
+  CC lib/util/strerror_tls.o
+  CC lib/util/string.o
+  CC lib/util/uuid.o
+  LIB libspdk_util.a
+  CC lib/json/json_parse.o
+  CC lib/conf/conf.o
+  CC lib/json/json_util.o
+  CC lib/thread/thread.o
+  CC lib/json/json_write.o
+  LIB libspdk_conf.a
+  LIB libspdk_thread.a
+  CC lib/blob/blobstore.o
+  CC lib/blob/request.o
+  CC lib/blob/zeroes.o
+  CC lib/blob/blob_bs_dev.o
+  LIB libspdk_json.a
+  CC lib/jsonrpc/jsonrpc_server.o
+  CC lib/jsonrpc/jsonrpc_server_tcp.o
+  CC lib/accel/accel_engine.o
+  CC lib/jsonrpc/jsonrpc_client.o
+  CC lib/jsonrpc/jsonrpc_client_tcp.o
+  CC lib/virtio/virtio.o
+  LIB libspdk_jsonrpc.a
+  LIB libspdk_accel.a
+  CC lib/rpc/rpc.o
+  CC lib/virtio/virtio_user.o
+  LIB libspdk_rpc.a
+  CC lib/virtio/virtio_pci.o
+  CC lib/notify/notify.o
+  CC lib/virtio/vhost_user.o
+  CC lib/notify/notify_rpc.o
+  LIB libspdk_notify.a
+  CC lib/trace/trace.o
+  CC lib/net/interface.o
+  LIB libspdk_virtio.a
+  CC lib/sock/sock.o
+  CC lib/trace/trace_flags.o
+  CC lib/net/net_rpc.o
+  CC lib/trace/trace_rpc.o
+  LIB libspdk_net.a
+  CC lib/sock/sock_rpc.o
+  LIB libspdk_trace.a
+  CC lib/event/app.o
+  CC lib/bdev/bdev.o
+  LIB libspdk_sock.a
+  CC lib/bdev/bdev_rpc.o
+app.c: In function ‘spdk_app_parse_args’:
+app.c:968:7: error: this statement may fall through [-Werror=implicit-fallthrough=]
+    if (rc < 0) {
+       ^
+app.c:977:3: note: here
+   case HUGE_UNLINK_OPT_IDX:
+   ^~~~
+cc1: all warnings being treated as errors
+make[2]: *** [/home/suh/src/spdk/git/push/spdk/mk/spdk.common.mk:370：app.o] 错误 1
+make[1]: *** [/home/suh/src/spdk/git/push/spdk/mk/spdk.subdirs.mk:44：event] 错误 2
+make[1]: *** 正在等待未完成的任务....
+  CC lib/bdev/bdev_zone.o
+  CC lib/bdev/part.o
+  CC lib/bdev/scsi_nvme.o
+  LIB libspdk_blob.a
+  LIB libspdk_bdev.a
+make: *** [/home/suh/src/spdk/git/push/spdk/mk/spdk.subdirs.mk:44：lib] 错误 2
